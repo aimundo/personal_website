@@ -1,4 +1,4 @@
-baseURL = "https://aimundo.netlify.app"
+baseURL = "https://aimundo.netlify.app/"
 theme = "hugo-apero"
 languageCode = "en"
 title = "Ariel Mundo"
