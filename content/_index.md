@@ -6,7 +6,6 @@ description: Welcome to my personal website.
 image_left: true
 images:
 - img/leaf.jpg
-size: 200x200
 show_action_link: true
 show_social_links: true
 subtitle: 
