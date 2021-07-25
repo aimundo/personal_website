@@ -1,0 +1,14 @@
+---
+title: testing Javascript visualizations
+author: ''
+date: '2021-07-25'
+slug: []
+categories: []
+tags: []
+---
+<!-- https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo -->
+#### Testing
+
+<div class="visualisation"> </div> <!-- Hugo supports html in markdown -->
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script> <!-- load p5.js from CDN-->
+<script src = "/penrose.js"></script> <!-- this will pick our script  -->

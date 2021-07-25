@@ -2,10 +2,10 @@
 action_label: Read More &rarr;
 action_link: /about
 action_type: text
-description: Welcome to my personal website.
-image_left: true
+description: I am PhD Candidate in the Department of Biomedical Engineering at the University of Arkansas. My research focuses on cancer, but I am also interested in Statistics, and Biomedical Data Science.
 images:
-- img/leaf.jpg
+    - img/leaf.jpg
+image_left: true
 show_action_link: true
 show_social_links: true
 subtitle: 

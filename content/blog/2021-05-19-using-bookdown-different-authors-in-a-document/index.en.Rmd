@@ -141,3 +141,6 @@ A couple of final thoughts:
 - Also, I am a convert. Only `Bookdown` to write documents from now on!
 
 
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="penrose.js"></script>
+
