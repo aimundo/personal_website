@@ -46,11 +46,15 @@ class Particle {
 let particles = [];
 
 function setup() {
-  createCanvas(720, 400);
+  var canvas = createCanvas(700, 470); //make it an object
+  // Move the canvas so it’s inside our <div id="sketch-holder">.
+  canvas.parent('particles-holder');
   for(let i = 0;i<width/10;i++){
     particles.push(new Particle());
   }
 }
+
+
 
 function draw() {
   background('#0f0f0f');

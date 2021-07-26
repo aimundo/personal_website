@@ -1,5 +1,5 @@
 ---
-title: testing Javascript visualizations
+title: Adding JavaScript animations using p5.js
 author: ''
 date: '2021-07-25'
 slug: []
@@ -7,12 +7,73 @@ categories: []
 tags: []
 ---
 <!-- https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo -->
+
+Disclaimer:  I am no Javascript expert. The target audience for this post are those that want to add something _extra_ to their site, but that like me, have very little knowledge of JavaScript. 
+
+But let me say this: it's doable, and that is the beauty of the Hugo Apero theme, it is very well organized and makes it easy to follow!
+
+### How the idea started
+
+A couple weeks ago I read a Tweet from Alison Presmanes Hill where se commented on the beauty of Deisy Gysi's [site](https://deisygysi.github.io/). And the site is truly beautiful, the background is mesmerizing! I was intrigued on how this could be done. 
+
+Because I am no programming wizard (faaaar from it), but have learned to dig information during my PhD, I decided to start my quest by googling "hugo background animation". Among the first results that I could see, there was one that caught my eye: "Customizing a Hugo theme with an animated P5.js background" (which can be found [here](https://nathan.exchange/posts/p5js-background-for-hugo/)). 
+
+Upon doing some reading two things were clear:
+
+- Such customization required JavaScript
+
+- The post was a little bit old (2018).
+
+From seeing the structure of the folders described in the post I could tell that the Apero theme did not have the same structure. Moreover, because I knew that Hugo themes tend to have multiple changes over time, I was afraid that by making the proposed changes in the post I would end up messing things too much (it had happened before and I ended up burning everything to the ground from the Hugo Academic theme and migrated to the Apero theme, which had substantial benefits).
+
+But one thing was clear, this was doable. However, the first thing I wanted to know was what was this "p5.js" thing. Well, turns out that [p5](https://p5js.org/) is a JavaScript (JS) library for creative coding. Watching the examples on the site was mindblowing! Take some time and look them up, because although most of them are in plain black and white, it's easy to see the potential of using p5 to create beautiful artwork. 
+
+One of the examples is called ["particles"](https://p5js.org/examples/simulate-particles.html), and when I saw it I realized that it was very similar to Geisy's website background. Actually, there is a library called "particles.js" that makes it easy to use and customize (see [here](https://vincentgarreau.com/particles.js/)). 
+
+### The quest continues
+
+I had a starting point, I wanted to use p5.js, but I could not find a thorough explanation of how to use the library on a Hugo site. I noticed that some people had asked similar questions in the Hugo community, but honestly I lacked the programming experience to understand the explanations given, or they were too vague (multiple times I found something along the lines of "can be implemented later").
+
+However, one thing became apparent from reading these posts: If you are going to use JS on a Hugo site, the scripts need to be in a specific folder. I noticed most of the posts made reference to the root **static/** folder as the place where `.js` files need to be placed. I also ended up learning that because of the way Hugo works, it is recommended that any changes you make on your site regarding style (CSS, fonts, etc.) are to be placed in folders in the root directory (such as `static`, `assets`, etc), rather than altering the theme itself. 
+
+When Hugo loads the site it looks on the root folder first and any changes you have made regarding style override the default theme settings. And because is easy to keep track of changes and additions that are made on the folders you create on the root directory rather than messing with the `themes/hugo-apero` folders, this saves you multiple headeaches later, which is something I can attest.  
+
+Back to the question at hand, I stumbled on [this](https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo) post, where someone asked about using something called D3.js in a Hugo site. Now, D3.js is not p5.js but there is a saying in Spanish that goes _un diablo se parece a otro_, which basically means that sometimes you can confuse two persons that look alike. In my naive mind, D3.js was close enough to p5.js and I thought that the procedure to implement the first had to work for the latter.
+
+### What you need to do
+
+OK, so here is where things get interesting. Say you want to add the "particles" example from p5.js to a blog post. The first thing you need to do is to copy the code that appears below the example on the [site](https://p5js.org/examples/simulate-particles.html) and paste it in a file that we will call `particles.js`. The file needs to exist in a root folder called `static`, and for the sake of being organized we will further place it in a folder called `js`. 
+In other words, the path is `../static/js/particles.js`
+
+So far, so good. Now, say you create a new blog post, which you will coveniently create using the Blogdown 'new post' Addin in RStudio. Say you create a blog post titled "Testing p5.js" and that you are going to make it using a `.Rmd` file. 
+
+Below the YAML header, you can write some text:
+
+First, we need to call the p5.js library:
+
+```
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script> <!-- load p5.js from CDN--> 
+```
+
+And then we will call our `particles.js` script:
+
+```
+<script src = "/js/particles.js"></script> <!-- this will pick our script  -->
+```
+
+Just by adding those two lines, you should be able to see the animation running _at the bottom_ of the page.
+
+Ok, so here is where things get interesting. It took some reading to understand that 
+
+
 #### Testing
 
 Here we have a particle simulation from p5.js.
 
 <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script> <!-- load p5.js from CDN--> 
-<script type="text/javascript" src = "/js/particles.js"></script> <!-- this will pick our script  -->
+<script src = "/js/particles.js"></script> <!-- this will pick our script  -->
 
+<div id="particles-holder"> <!-- this sets the position of the script -->
+</div>
 
 As you can see, it is easily achievable.
