@@ -2,13 +2,18 @@
 let ds;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  var canvas=createCanvas(500, 500);
+  canvas.position(450, 100,-1);
+  canvas.parent('penrose-holder');
   ds = new PenroseLSystem();
   //please, play around with the following line
-  ds.simulate(5);
+  ds.simulate(3.5);
 }
 
+
+
 function draw() {
+  frameRate(10);
   background(227,227,218);
   ds.render();
 }
@@ -89,13 +94,19 @@ PenroseLSystem.prototype.render = function () {
       this.steps = this.production.length;
     }
 
+
     for(let i=0; i<this.steps; ++i) {
       let step = this.production.charAt(i);
 
+
       //'W', 'X', 'Y', 'Z' symbols don't actually correspond to a turtle action
       if( step == 'F') {
-        stroke(41, 107, 118);
+        //stroke(random(3,40),random(255),random(255),80);
+        //stroke(88,100,122,80);
+        stroke(0,0,0,80);
+        //stroke(68, 130, 171,80);
         for(let j=0; j < this.repeats; j++) {
+          strokeWeight(1.5);
           line(0, 0, 0, -this.drawLength);
           noFill();
           translate(0, -this.drawLength);

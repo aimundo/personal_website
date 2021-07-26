@@ -1,18 +1,19 @@
 ---
-action_label: Read More &rarr;
+action_label: MORE ABOUT ME &rarr;
 action_link: /about
 action_type: text
-description: I am PhD Candidate in the Department of Biomedical Engineering at the University of Arkansas. My research focuses on cancer, but I am also interested in Statistics, and Biomedical Data Science.
+description: I am Graduate Research Assistant in the Department of Biomedical Engineering at the University of Arkansas. My research focuses on cancer. Additionaly, I enjoy using and learning about Statistics, and Biomedical Data Science. I am a huge fan of R, and enjoy using the `tidyverse` and `ggplot2` (oh, and `mgcv`).
 images:
-    - img/leaf.jpg
 image_left: true
 show_action_link: true
 show_social_links: true
-subtitle: 
 text_align_left: false
-title: Hi there! / ¡Hola!
+title: Ariel Mundo
+subtitle: PhD Candidate, Biomedical Engineering
 type: home
 ---
 
 ** index doesn't contain a body, just front matter above.
 See index.html in the layouts folder **
+
+
