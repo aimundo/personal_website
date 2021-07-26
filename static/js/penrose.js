@@ -2,8 +2,8 @@
 let ds;
 
 function setup() {
-  var canvas=createCanvas(500, 500);
-  canvas.position(450, 100,-1);
+  let canvas=createCanvas(500,500);
+  canvas.position(450, 150, 'inherited');
   canvas.parent('penrose-holder');
   ds = new PenroseLSystem();
   //please, play around with the following line
@@ -16,6 +16,10 @@ function draw() {
   frameRate(10);
   background(227,227,218);
   ds.render();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth/5, windowHeight/5);
 }
 
 function PenroseLSystem() {
