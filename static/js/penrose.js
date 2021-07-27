@@ -1,13 +1,18 @@
 
-let ds;
+let start_time, ds;
+
+//function start() {
+  //  start_time = millis();
+//}
 
 function setup() {
-  let canvas=createCanvas(500,500);
-  canvas.position(450, 150, 'inherited');
-  canvas.parent('penrose-holder');
-  ds = new PenroseLSystem();
-  //please, play around with the following line
-  ds.simulate(3.5);
+    let canvas=createCanvas(windowWidth/3,windowHeight/1.5);
+    canvas.position(windowWidth/10, windowHeight/4.5,'fixed');
+    canvas.parent('penrose-holder');
+    ds = new PenroseLSystem();
+    //please, play around with the following line
+    ds.simulate(3.5);
+    //start(); //start timer
 }
 
 
@@ -16,6 +21,11 @@ function draw() {
   frameRate(10);
   background(227,227,218);
   ds.render();
+  //let current_time = millis();
+  //let timespane = 1 * 1000; // 10 seconds
+  //if (current_time > start_time + timespane) {
+    //    start();
+  //}
 }
 
 function windowResized() {
