@@ -2,10 +2,18 @@
 let  ds;
 
 
+function createMetaTag() {
+	let meta = createElement('meta');
+	meta.attribute('name', 'viewport');
+	meta.attribute('content', 'user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-height');
+
+	let head = select('head');
+	meta.parent(head);
+}
 
 function setup() {
-    let canvas=createCanvas(windowWidth/3,windowHeight/1.5);
-    canvas.position(windowWidth/10, windowHeight/4.5,'fixed');
+    let canvas=createCanvas(window.innerWidth/3,window.innerHeight/2.2);
+    canvas.position(window.innerWidth/10, window.innerHeight/8,'fixed');
     canvas.parent('penrose-holder');
     ds = new PenroseLSystem();
     frameRate(10);
@@ -22,7 +30,7 @@ function draw() {
 }
 
 function windowResized() {
-  resizeCanvas(windowWidth/3, windowHeight/1.5);
+  resizeCanvas(window.innerWidth/3, window.innerHeight/1.5);
 }
 
 function PenroseLSystem() {
