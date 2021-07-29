@@ -1,33 +1,35 @@
 
-let  ds;
+let  ds, start_time;
 
-
-function createMetaTag() {
-	let meta = createElement('meta');
-	meta.attribute('name', 'viewport');
-	meta.attribute('content', 'user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1,width=device-width,height=device-height');
-
-	let head = select('head');
-	meta.parent(head);
-}
 
 function setup() {
     let canvas=createCanvas(window.innerWidth/3,window.innerHeight/2.2);
     canvas.position(window.innerWidth/10, window.innerHeight/8,'fixed');
     canvas.parent('penrose-holder');
-    ds = new PenroseLSystem();
-    frameRate(10);
+    init();
+}
+
+//this function implements a timer to track the sketch
+function init () {
+  ds = new PenroseLSystem();
+  frameRate(30);
     //please, play around with the following line
-    ds.simulate(3.5);
+  ds.simulate(4);
+  r=random(250);
+  g=random(250);
+  b=random(250);
+  start_time=millis();
 
 }
-
-
 function draw() {
-  background(227,227,218);
+  clear(); //transparent background
   ds.render();
-
-}
+  let current_time = millis();
+    let timespane = 17 * 1000; // 10 seconds
+    if (current_time > start_time + timespane) { //condition to restart the sketch
+        init();
+    }
+  }
 
 function windowResized() {
   resizeCanvas(window.innerWidth/3, window.innerHeight/1.5);
@@ -118,7 +120,7 @@ PenroseLSystem.prototype.render = function () {
       if( step == 'F') {
         //stroke(random(3,40),random(255),random(255),80);
         //stroke(88,100,122,80);
-        stroke(0,0,0,80);
+        stroke(r,g,b,80);
         //stroke(68, 130, 171,80);
         for(let j=0; j < this.repeats; j++) {
           strokeWeight(1.5);
