@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hi there! / ¡Hola! on Ariel Mundo</title>
+    <link>https://aimundo.netlify.app/</link>
+    <description>Recent content in Hi there! / ¡Hola! on Ariel Mundo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 21 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Prework</title>
+      <link>https://aimundo.netlify.app/collection/prework/</link>
+      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/collection/prework/</guid>
+      <description>Welcome to the Introducing Yourself Online workshop! We look forward to meeting you. Before attending the workshop, please complete the following prework.
+Set up RStudio Cloud     Sign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember).</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://aimundo.netlify.app/resume/resume/</link>
+      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/resume/resume/</guid>
+      <description>You can see a PDF version of my resume here.</description>
+    </item>
+    
+    <item>
+      <title>Panicking over References</title>
+      <link>https://aimundo.netlify.app/blog/panicking-over-references/</link>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/panicking-over-references/</guid>
+      <description>Submitting a TeX file, and the final proof does not show the references</description>
+    </item>
+    
+    <item>
+      <title>Building a manuscript using Bookdown</title>
+      <link>https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/</guid>
+      <description>Why?This is the second post about working with Bookdown and my experience on the process (first post is here). This post focuses on how I found that was easy to compartmentalize my work and some tips I learned along the way (I will probably write about some other things in the future as well).
+Use “chapters”When I started working with Bookdown I was making a single document for my manuscript.</description>
+    </item>
+    
+    <item>
+      <title>Using Bookdown: Different authors in a document</title>
+      <link>https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/</guid>
+      <description>You are working on a manuscript using Bookdown and need to add author information. How do you do it without using the predefined method?</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://aimundo.netlify.app/contact/</link>
+      <pubDate>Mon, 25 Feb 2019 13:38:41 -0600</pubDate>
+      
+      <guid>https://aimundo.netlify.app/contact/</guid>
+      <description>** Contact page don&amp;rsquo;t contain a body, just the front matter above. See form.html in the layouts folder.
+Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.</description>
+    </item>
+    
+    <item>
+      <title>Typography Styles &amp; Element Examples</title>
+      <link>https://aimundo.netlify.app/elements/</link>
+      <pubDate>Mon, 18 Feb 2019 12:27:33 -0600</pubDate>
+      
+      <guid>https://aimundo.netlify.app/elements/</guid>
+      <description>Font Sizes   A A A A A A A A   6rem
+(96px) 5rem
+(80px) 3rem
+(48px) 2.25rem
+(36px) 1.5rem
+(24px) 1.25rem
+(20px) 1rem
+(16px) .875rem
+(14px)     Type Samples Head&amp;shy;line Sub&amp;shy;head&amp;shy;line Level 1 Heading One page to rule them all...well, not really. This page displays sample typography and page elements to illustrate their style. Things like headings and paragraphs showing the beautiful type scale, form elements, tabular data, and image layouts just to name a few.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aimundo.netlify.app/about/header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/about/header/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aimundo.netlify.app/about/sidebar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/about/sidebar/</guid>
+      <description>** index doesn&amp;rsquo;t contain a body, just front matter above. See about/list.html in the layouts folder **</description>
+    </item>
+    
+    <item>
+      <title>Contributors</title>
+      <link>https://aimundo.netlify.app/contributors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/contributors/</guid>
+      <description>Thank you to all the folks who have contributed both technical and creative skills to this project:
+   Desirée De Leon 🦒 (designed 5 of the custom color themes, made illustrations for the workshop, and provided general aesthetic feedback along the way)
+   Garrick Aden-Buie 🧙‍♀️ (debugged headroom.js and lent his panelset.js code to the theme)
+   Allison Horst 🐕 (awesome illustrations of campfires, seedlings, and evergreens, as well as my R Markdown hedgehog mascot 🦔)</description>
+    </item>
+    
+    <item>
+      <title>Hi!</title>
+      <link>https://aimundo.netlify.app/about/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/about/main/</guid>
+      <description>** index doesn&amp;rsquo;t contain a body, just front matter above. See about/list.html in the layouts folder **</description>
+    </item>
+    
+    <item>
+      <title>License</title>
+      <link>https://aimundo.netlify.app/license/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/license/</guid>
+      <description>My blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License.
+  </description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Ariel Mundo</title>
+    <link>https://aimundo.netlify.app/categories/</link>
+    <description>Recent content in Categories on Ariel Mundo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bibtex</title>
+      <link>https://aimundo.netlify.app/categories/bibtex/</link>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/bibtex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>LaTeX</title>
+      <link>https://aimundo.netlify.app/categories/latex/</link>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bookdown</title>
+      <link>https://aimundo.netlify.app/categories/bookdown/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/bookdown/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://aimundo.netlify.app/categories/r/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://aimundo.netlify.app/categories/tutorial/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/tutorial/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

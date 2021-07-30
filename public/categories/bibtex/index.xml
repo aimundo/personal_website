@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bibtex on Ariel Mundo</title>
+    <link>https://aimundo.netlify.app/categories/bibtex/</link>
+    <description>Recent content in Bibtex on Ariel Mundo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/categories/bibtex/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Panicking over References</title>
+      <link>https://aimundo.netlify.app/blog/panicking-over-references/</link>
+      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/panicking-over-references/</guid>
+      <description>Submitting a TeX file, and the final proof does not show the references</description>
+    </item>
+    
+  </channel>
+</rss>

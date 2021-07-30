@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>R on Ariel Mundo</title>
+    <link>https://aimundo.netlify.app/categories/r/</link>
+    <description>Recent content in R on Ariel Mundo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 04 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/categories/r/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building a manuscript using Bookdown</title>
+      <link>https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/</link>
+      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/</guid>
+      <description>Why?This is the second post about working with Bookdown and my experience on the process (first post is here). This post focuses on how I found that was easy to compartmentalize my work and some tips I learned along the way (I will probably write about some other things in the future as well).
+Use “chapters”When I started working with Bookdown I was making a single document for my manuscript.</description>
+    </item>
+    
+    <item>
+      <title>Using Bookdown: Different authors in a document</title>
+      <link>https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/</guid>
+      <description>You are working on a manuscript using Bookdown and need to add author information. How do you do it without using the predefined method?</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.85.0" />
+<title>Using Bookdown: Different authors in a document | Ariel Mundo</title>
+
+
+<meta property="twitter:site" content="@aimundo">
+<meta property="twitter:creator" content="@aimundo">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="A quest to add multiple authors to a Bookdown document">
+
+
+<meta property="og:site_name" content="Ariel Mundo">
+<meta property="og:title" content="Using Bookdown: Different authors in a document | Ariel Mundo">
+<meta property="og:description" content="A quest to add multiple authors to a Bookdown document" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://aimundo.netlify.app/blog/sidebar-listing.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://aimundo.netlify.app/blog/sidebar-listing.jpg" >
+    
+    
+  <meta itemprop="name" content="Using Bookdown: Different authors in a document">
+<meta itemprop="description" content="You are working on a manuscript using Bookdown and need to add author information. How do you do it without using the predefined method?"><meta itemprop="datePublished" content="2021-05-19T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-05-19T22:06:58-05:00" />
+<meta itemprop="wordCount" content="1424">
+<meta itemprop="keywords" content="bookdown,LaTeX," />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.e5b780835444cd354e39869ebd16c78ca2265e7e5ed7381dddd6c2b76b402fed.css" integrity="sha256-5beAg1REzTVOOYaevRbHjKImXn5e1zgd3dbCt2tAL&#43;0=" media="screen">
+  
+  
+  <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://aimundo.netlify.app/" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Ariel Mundo">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/resume/" title="resume">resume</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Using Bookdown: Different authors in a document</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">A quest to add multiple authors to a Bookdown document</h4>
+        <p class="f6 measure lh-copy mv1">By Ariel Mundo in <a href="https://aimundo.netlify.app/categories/r">R</a>  <a href="https://aimundo.netlify.app/categories/tutorial">tutorial</a> </p>
+        <p class="f7 db mv0 ttu">May 19, 2021</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+<script src="https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/index.en_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Disclaimer: I am writing this Blog in hopes that what I’ve learned helps someone else, but I also do it as a cathartic component of the learning process. So dear reader, please bear with me while I narrate my journey…</p>
+<div id="why-dont-you-try-rmarkdown-and-moving-to-bookdown" class="section level1">
+<h1>“Why don’t you try RMarkdown?” and moving to Bookdown</h1>
+<p>A while ago I started to work on a manuscript, and during a meeting with the co-authors one of them said “Why don’t you try RMarkdown to write this project?”. Until that moment, I had only used Word to write scientific documents, and a quick look on the Internet confirmed my initial suspicion that using RMarkdown was a complete different experience than using Word. Nonetheless, I also had a feeling that learning to do things in RMarkdown <em>had</em> to be beneficial, so I decided that it was worth to give it a shot. If I didn’t like how things were going after a week, I would go back to Word.</p>
+<p>Fast forward a couple days later and I’m starting to understand how things work on RMarkdown, and I also realize that I need to cross-reference an equation in the manuscript. A Google search indicates that to do this, I should probably use <a href="https://bookdown.org/yihui/rmarkdown/"><strong>Bookdown</strong></a>. A quick glimpse on the Bookdown manual also indicates that Bookdown offers more capabilities than RMarkdown to reference equations and figures. So I start working on Bookdown. As I work on the manuscript more and more, I find that using Bookdown is substantially more beneficial to write a document than Word. Equations? Easy, and unlike the equations made in Word, here they look gorgeous, textbook-like. Citations? A small learning curve, but you understand what you are doing and control the amount of information you have for each reference. Above all, one of the major advantages is that when creating figures in R you don’t have to mess with importing the figure and fighting with its placement in the document, which is always a pain in Word!</p>
+<p>However, about a week ago I decided to work on some minor things, and had to add the author information on the manuscript (which hencefort I will call <code>Manuscript.Rmd</code>). There are three authors, two of which (including myself) are from the same academic institution. I try the option of listing the authors in the YAML header as the Bookdown manual suggests (title and author information in this case are fake):</p>
+<pre><code>---
+title: &#39;**A longitudinal analysis of Twitter trends in the year 2020**&#39;
+subtitle: _Political and sociological considerations_
+author:
+- Benicio del Ox^[Department of Sociology, University of the Insula]
+- Jake A. Motaungh^[Department of Sociology, University of the Insula]
+- Frederick P. Montego^[Department of Psychology, University of Mars]
+---</code></pre>
+<p>The main problem here is that when rendered, the header looked like this:
+<img src="Header_1.JPG" alt="h-1" /></p>
+<p>While the footnote looked like this:
+<img src="footnote_1.JPG" alt="footnote-1" /></p>
+<p>Its clear that every author was being assigned a “different” institution. I was naive enough to think that Bookdown would “detect and merge” the affiliation of twor or more authors when it was the same, but that was clearly not the case.</p>
+<p>I couldn’t find a satisfactory answer to this problem in the Bookdown Cookbook or in the forums I consulted, but what I did found was that there is a <span class="math inline">\(\LaTeX\)</span> package called <code>authblk</code> that allows for better control on the author information. This search also lead me to <a href="https://www.r-bloggers.com/2020/12/author-with-affiliation-in-bookdown-html-and-pdf/"><strong>this</strong></a> post on Rbloggers with a proposed solution on how to use <code>authblk</code> in a Bookdown document.</p>
+<p>However, the syntax offered by the post didn’t work for me, and after repeatedly trying to make the YAML header to behave (YAML headers are quite temperamental and picky about indentations!) I started to think that I would probably have to submit a question about this issue in some specialized forum (which would involve creating a <code>reprex</code>, creating an account, registering, and the list goes on…).</p>
+<p>After reading for a while again, I discover (yes, I know this is pretty well known to almost anyone, but it felt like a great discover to me, nonetheless) that more control over the creation of the document can be achieved by using a <code>.sty</code> file. In short, the <code>.sty</code> file can contain some <span class="math inline">\(\LaTeX\)</span> code that allows to customize the final document (longer explanation <a href="http://dw.tug.org/pracjourn/2005-3/asknelly/nelly-sty-&amp;-cls.pdf"><strong>here</strong></a>). This discovery was really convenient as this approach would allow me add line numbers, which is something I also wanted to do on the document.</p>
+<p>So I proceeded as follows:</p>
+<ul>
+<li><p>Creating a <code>.sty</code> file called “preamble” that was the same directory where <code>Manuscript.Rmd</code> was located.</p></li>
+<li><p>In <code>preamble.sty</code>:</p></li>
+</ul>
+<pre><code>\usepackage{lineno}
+\usepackage{authblk}
+
+%command for the package lineno to put line numbers in the manuscript
+\linenumbers
+
+%authors
+\author[1]{Benicio del Ox}
+\author[2]{Jake A. Motaungh}
+\author[1]{Frederick P. Montego}
+\affil[1]{\footnotesize Department of Sociology, University of the Insula}
+\affil[2]{\footnotesize Department of Psychology, University of Mars}
+</code></pre>
+<p>Then, in the YAML header of <code>Manuscript.Rmd</code> I added two lines to indicate that <span class="math inline">\(\LaTeX\)</span> code is in <code>preamble.sty</code>. The two lines are <code>includes</code> and <code>in_header</code>:</p>
+<pre><code>---
+title: &#39;**A longitudinal analysis of Twitter trends in the year 2020**&#39;
+subtitle: _Political and sociological considerations_
+output:  
+  bookdown::pdf_document2:
+    keep_tex: yes
+    includes:
+      in_header: preamble.sty
+---
+</code></pre>
+<p>Alright! And the document looked like…
+<img src="Header_2.JPG" alt="h-2" /></p>
+<p>Huh… that was odd. It was nice to see that the document had line numbers, but you can notice that there is an additional “and” after the last author along with a superscript for the affiliation. This was the most frustrating thing, I am no <span class="math inline">\(\LaTeX\)</span> expert and I couldn’t find the cause of the problem, although I suspected that there was a conflict between the Pandoc LaTeX template and what the <code>authblk</code> package was doing. For this one, I was out of ideas after several hours of trying to fix the issue and decided to submit an issue on the <code>Bookdown</code> GitHub <a href="https://github.com/rstudio/bookdown"><strong>site</strong></a>.</p>
+<p>I got a very detailed response from the <code>Bookdown</code> team the next day (yesterday). So I decided to add the explanation and the solution here before I forget. It goes like this: RMarkdown uses a Pandoc <span class="math inline">\(\LaTeX\)</span> template (which can be found <a href="https://github.com/jgm/pandoc/blob/master/data/templates/default.latex"><strong>here</strong></a>)to build documents, and in that template there is an ‘author’ line that includes an <code>\and</code> command. In that template the field is not conditional, meaning that it will always appear even if you already have the information in a separate <code>.sty</code> or <code>.tex</code> file. Because in this case I have no ‘author’ information to pass to the template (as the author information is in the <code>.sty</code> file) the template author field remain blank but the <code>\and</code> will always appear.</p>
+<p>There are two solutions which the <code>Bookdown</code> team provided (<a href="https://github.com/rstudio/bookdown/issues/1158"><strong>here</strong></a>):</p>
+<ul>
+<li>Use a custom LaTeX template that does not include the <code>\author</code> line.</li>
+<li>Add a function in the <code>.Rmd</code> document that post-processes the <span class="math inline">\(\LaTeX\)</span> file through <code>bookdown.post.latex</code>(more information about this function <a href="https://github.com/rstudio/bookdown/blob/master/R/latex.R"><strong>here</strong></a>)</li>
+</ul>
+<p>I tried both options. In the first case, you only need to edit the original template, save with a custom name in the same directory where your <code>.Rmd</code> file is and call it in the YAML header like this:</p>
+<pre><code>bookdown::pdf_document2:
+  template: my-template.tex</code></pre>
+<p>However, it seems that maintaining a custom template can be tricky if there are updates over time. So I also tried the second option, which is the function provided by the <code>Bookdown</code> team and that you have to place in a <code>setup</code> chunk at the beginning of the document. It can also be placed in the chunk where the <code>knitr::opts</code> line would be. The function is:</p>
+<pre><code>remove_author &lt;- function(x) {
+  # identify empty author line
+  i &lt;- grep(&quot;^\\\\author\\{\\}$&quot;, x)
+  # be sure it is the one pandoc inserts
+  if(length(i) != 0 &amp;&amp; grepl(&#39;^\\\\date\\{&#39;, x[i+1])) x &lt;- x[-i]
+  x
+}
+options(bookdown.post.latex = remove_author)
+</code></pre>
+<p>In this way, the default template is called, but the function will remove the <code>author</code> line. I found that this worked nicely, with the advantage of not having to worry about issues with a custom template. After compiling the PDF document using the function the final result looks like this:
+<img src="Header_3.JPG" alt="h-3" /></p>
+<p>Which is what I wanted. Quite a journey to have this resolved, but I learned a bunch of stuff along the way! I hope this post helps anyone going through the same issues.</p>
+<p>A couple of final thoughts:</p>
+<ul>
+<li><span class="math inline">\(LaTeX\)</span> is challenging but there’s whole world of things to experiment with!</li>
+<li>YAML headers are temperamental. Sometimes it’s good to use a <a href="https://yamlvalidator.com/"><strong>YAML validator</strong></a> to check it everything works. With more and more options and custom things in it, there is more chance that an indentation is not right and you can spend hours trying to find the problem (trust me, I’ve been there)</li>
+<li>Also, I am a convert. Only <code>Bookdown</code> to write documents from now on!</li>
+</ul>
+</div>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">May 19, 2021</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">7 minute read, 1424 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://aimundo.netlify.app/categories/r">R</a>  <a href="https://aimundo.netlify.app/categories/tutorial">tutorial</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://aimundo.netlify.app/tags/bookdown">bookdown</a>  <a href="https://aimundo.netlify.app/tags/latex">LaTeX</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/building-a-manuscript-using-bookdown/">Building a manuscript using Bookdown</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/">&larr; Building a manuscript using Bookdown</a>
+  
+  
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="apreshill/apero"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2021 Ariel Mundo
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/aimundo" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/amundortiz" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0002-6014-4538" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+</footer>
+
+      </div>
+    </body>
+</html>

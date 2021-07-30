@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.85.0" />
+<title>Building a manuscript using Bookdown | Ariel Mundo</title>
+
+
+<meta property="twitter:site" content="@aimundo">
+<meta property="twitter:creator" content="@aimundo">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="Lessons from experience">
+
+
+<meta property="og:site_name" content="Ariel Mundo">
+<meta property="og:title" content="Building a manuscript using Bookdown | Ariel Mundo">
+<meta property="og:description" content="Lessons from experience" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://aimundo.netlify.app/blog/sidebar-listing.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://aimundo.netlify.app/blog/sidebar-listing.jpg" >
+    
+    
+  <meta itemprop="name" content="Building a manuscript using Bookdown">
+<meta itemprop="description" content="Why?This is the second post about working with Bookdown and my experience on the process (first post is here). This post focuses on how I found that was easy to compartmentalize my work and some tips I learned along the way (I will probably write about some other things in the future as well).
+Use “chapters”When I started working with Bookdown I was making a single document for my manuscript."><meta itemprop="datePublished" content="2021-06-04T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-06-04T11:39:21-05:00" />
+<meta itemprop="wordCount" content="664">
+<meta itemprop="keywords" content="bookdown,LaTeX," />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.e5b780835444cd354e39869ebd16c78ca2265e7e5ed7381dddd6c2b76b402fed.css" integrity="sha256-5beAg1REzTVOOYaevRbHjKImXn5e1zgd3dbCt2tAL&#43;0=" media="screen">
+  
+  
+  <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://aimundo.netlify.app/" title="Home">
+      <img src="/img/blogophonic-mark-dark.png" class="dib db-l h2 w-auto" alt="Ariel Mundo">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/resume/" title="resume">resume</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Building a manuscript using Bookdown</h1>
+        <h4 class="f4 mt0 mb4 lh-title measure">Lessons from experience</h4>
+        <p class="f6 measure lh-copy mv1">By Ariel Mundo in <a href="https://aimundo.netlify.app/categories/r">R</a>  <a href="https://aimundo.netlify.app/categories/bookdown">bookdown</a>  <a href="https://aimundo.netlify.app/categories/latex">LaTeX</a> </p>
+        <p class="f7 db mv0 ttu">June 4, 2021</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+<script src="https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/index.en_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="why" class="section level2">
+<h2>Why?</h2>
+<p>This is the second post about working with <code>Bookdown</code> and my experience on the process (first post is <a href="http://aimundo.rbind.io/post/using-bookdown-different-authors-in-a-document/"><strong>here</strong></a>). This post focuses on how I found that was easy to compartmentalize my work and some tips I learned along the way (I will probably write about some other things in the future as well).</p>
+</div>
+<div id="use-chapters" class="section level1">
+<h1>Use “chapters”</h1>
+<p>When I started working with <code>Bookdown</code> I was making a single document for my manuscript. Doing it in that way was manageable at the beginning, but as I wrote more and added more code, scrolling down started to become painful (specially after I realized one day that I was at about 1000 lines in length between code/text). I decided that I wanted to break the document in pieces, but I didn’t know how. Reading through the Web I came to realize that you can piece a <code>Bookdown</code> document using the <code>child</code> option (see <a href="https://bookdown.org/yihui/rmarkdown-cookbook/child-document.html"><strong>here</strong></a> for a thorough description). The <code>child</code> option means that you will break your document in “Chapters” but they will be knitted in a single document when you compile the PDF/HTML output. For this to work you need in the same working directory:</p>
+<ul>
+<li>A “central” document that will contain the YAML header and the instructions to call all the other documents.</li>
+<li>All your “chapters”</li>
+</ul>
+<p>The “central” document will contain all the formatting instructions (YAML header with bibliography, references styles, <span class="math inline">\(\LaTeX\)</span> options, etc) and chunks of code where you call the “chapters”. Suppose you call this “central” document <code>Main.Rmd</code>, and that you have in the same directory two “chapters”: <code>Chapter 1.Rmd</code> and <code>Chapter 2.Rmd</code>.</p>
+<p>In <code>Main.Rmd</code>, after they YAML header and the chunk where the <code>knitr</code> options are specified, you need to add the chunks that will call the chapters, like this:</p>
+<pre><code>```{r child=&#39;Chapter 1.Rmd&#39;} 
+```</code></pre>
+<pre><code>```{r child=&#39;Chapter 2.Rmd&#39;} 
+```</code></pre>
+<p>The very convenient thing about using this approach, is that you can move across the chapters and find things <em>way</em> more quickly than using a single document; you can also check bugs in your code without constantly scrolling up and down. Keep in mind that all your packages need to be loaded in <code>Main.Rmd</code>, the “chapters” do <strong>not</strong> have a YAML header or an R chunk for options, you can start them just with text. If you were to open the file for the first chapter it would look like this:</p>
+<ul>
+<li>Chapter 1.Rmd</li>
+</ul>
+<pre class="text"><code># Chapter 1: Introduction
+
+In this section we will review the current status of the field of interest.</code></pre>
+<div id="things-to-keep-in-mind" class="section level2">
+<h2>Things to keep in mind</h2>
+<p>Below are a few things that are important to keep in mind when you are working with the <code>child</code> option in <code>Bookdown</code>:</p>
+<ul>
+<li><p>The complete document should be knitted from <code>Main.Rmd</code>. I sometimes made the mistake of trying to knit from one of the “chapter” files, but it does not work because all the packages and the YAML hearder are in <code>Main.Rmd</code> so it is there where you have to knit your document.</p></li>
+<li><p>If you want to debug some code, remember to always run the chunk in <code>Main.Rmd</code> that contains the libraries and any other things you need for your document to work. Specially if you are using a global theme for colors, for example. Because if you try to debug some <code>ggplot2</code> figures in <code>Chapter 1.Rmd</code> that use the global theme, you won’t be able to do it unless those settings are loaded in the environment.</p></li>
+<li><p>Learn to use <span class="math inline">\(\LaTeX\)</span> to control the formatting of the chapters. For example, I noticed that for my manuscript some of the Figures were being pushed to the next chapter by default, when I wanted them to stay in the chapter they belonged to. Options such as <code>\FloatBarrier</code>, which is from the <span class="math inline">\(\LaTeX\)</span> package <strong>float</strong>, allows you keep the figures in the chapter where they were created, therefore avoiding any weird Figure misplacing.</p></li>
+</ul>
+<p>There are many options in <span class="math inline">\(\LaTeX\)</span> that allow you to control the formatting of your document, so learning how to use packages is quite useful.</p>
+<p>Alright, that’s it for now!</p>
+</div>
+</div>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">June 4, 2021</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">4 minute read, 664 words</dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Categories:</dt>
+    <dd class="fw5 ml0"> <a href="https://aimundo.netlify.app/categories/r">R</a>  <a href="https://aimundo.netlify.app/categories/bookdown">bookdown</a>  <a href="https://aimundo.netlify.app/categories/latex">LaTeX</a> </dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Tags:</dt>
+    <dd class="fw5 ml0"> <a href="https://aimundo.netlify.app/tags/bookdown">bookdown</a>  <a href="https://aimundo.netlify.app/tags/latex">LaTeX</a> </dd>
+  </dl>
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+    <dd class="fw5 ml0"><a href="/blog/using-bookdown-different-authors-in-a-document/">Using Bookdown: Different authors in a document</a></dd>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+    <a class="prev dtc pr2 tl v-top fw6"
+    href="https://aimundo.netlify.app/blog/panicking-over-references/">&larr; Panicking over References</a>
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/">Using Bookdown: Different authors in a document &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="apreshill/apero"
+          issue-term="pathname"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2021 Ariel Mundo
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/aimundo" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/amundortiz" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0002-6014-4538" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+</footer>
+
+      </div>
+    </body>
+</html>

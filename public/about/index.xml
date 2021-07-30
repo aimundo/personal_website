@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>About on Ariel Mundo</title>
+    <link>https://aimundo.netlify.app/about/</link>
+    <description>Recent content in About on Ariel Mundo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language><atom:link href="https://aimundo.netlify.app/about/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title></title>
+      <link>https://aimundo.netlify.app/about/header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/about/header/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://aimundo.netlify.app/about/sidebar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/about/sidebar/</guid>
+      <description>** index doesn&amp;rsquo;t contain a body, just front matter above. See about/list.html in the layouts folder **</description>
+    </item>
+    
+    <item>
+      <title>Hi!</title>
+      <link>https://aimundo.netlify.app/about/main/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/about/main/</guid>
+      <description>** index doesn&amp;rsquo;t contain a body, just front matter above. See about/list.html in the layouts folder **</description>
+    </item>
+    
+  </channel>
+</rss>

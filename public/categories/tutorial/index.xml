@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tutorial on Ariel Mundo</title>
+    <link>https://aimundo.netlify.app/categories/tutorial/</link>
+    <description>Recent content in tutorial on Ariel Mundo</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/categories/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Bookdown: Different authors in a document</title>
+      <link>https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/</link>
+      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/</guid>
+      <description>You are working on a manuscript using Bookdown and need to add author information. How do you do it without using the predefined method?</description>
+    </item>
+    
+  </channel>
+</rss>
