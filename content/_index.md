@@ -2,7 +2,7 @@
 action_label: MORE ABOUT ME &rarr;
 action_link: /about
 action_type: text
-description: I am Graduate Research Assistant in the Department of Biomedical Engineering at the University of Arkansas. My research focuses on cancer. Additionaly, I enjoy using and learning about Statistics, and Biomedical Data Science. I am a huge fan of R, and enjoy using the `tidyverse` and `ggplot2` (oh, and `mgcv`).
+description: I am Graduate Research Assistant in the Department of Biomedical Engineering at the University of Arkansas. My research studies how cancer is affected by therapy over time, and I am focused on making my work reproducible and open. 
 images:
 image_left: true
 show_action_link: true

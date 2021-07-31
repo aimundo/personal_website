@@ -6,7 +6,7 @@ use_featured: false # if false, use most recent by date
 number_categories: 1 # set to zero to exclude
 show_intro: true
 intro: |
- I am a PhD Candidate in the Department of Biomedical Engineering at the University of Arkansas, Fayetteville. Curiosity (and necessity) led me to take a class to learn R.  Little I knew that that class would change my view of Statistics and to question how data is traditionally analyzed in biomedical research. I am interested in novel approaches to analyze longitudinal data, and I try to make research reproducibility a core component of my work.
+ I am a PhD Candidate in the Department of Biomedical Engineering at the University of Arkansas, Fayetteville in the [Muldoon Lab](https://muldoonlab.uark.edu/). I am interested in studying the temporal effects of therapy in cancer, and in how semi-parametric statistical models can be used by biomedical researchers to analyze longitudinal studies. Curiosity led me to take a class to learn R.  Little I knew that learning R and would change my view of Statistics and spark the desire to better understand Statistical theory. I enjoy using the `ggplot2` and `tidyverse` packages, and more recently, I have worked extensively to analyze longitudinal data using generalized additive models (GAMs) with the package `mgcv`.
 
 show_outro: false
 outro: |

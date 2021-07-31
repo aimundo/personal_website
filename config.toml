@@ -85,10 +85,10 @@ enableEmoji = true
       icon      = "github" # icon name without the 'fa-'
       icon_pack = "fab"
       url       = "https://github.com/aimundo"
-  #[[params.social]]
-   #   icon      = "facebook-square" # icon name without the 'fa-'
-  #    icon_pack = "fab"
-   #   url       = "https://www.facebook.com/hashtag/ap%C3%A9ro"
+  [[params.social]]
+      icon      = "google-scholar" # icon name without the 'fa-'
+      icon_pack = "ai"
+      url       = "https://scholar.google.com/citations?user=3Ia93g4AAAAJ&hl=en"
   #[[params.social]]
    #   icon      = "instagram" # icon name without the 'fa-'
     #  icon_pack = "fab"
