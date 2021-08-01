@@ -9,8 +9,8 @@ function setup() {
     let canvas=createCanvas(displayWidth/2.5,displayHeight/1.8);
     canvas.position(displayWidth/10, displayHeight/2,'fixed');
   } else {
-    let canvas=createCanvas(displayWidth/2.5,displayHeight/1.8);
-    canvas.position(displayWidth/10, displayHeight/7,'inherited');
+    let canvas=createCanvas(displayWidth/2.5,displayHeight/2.5);
+    canvas.position(displayWidth/10, displayHeight/8,'inherited');
     canvas.parent('penrose-holder');
   }
     //canvas.style('z-index', '1');
@@ -27,13 +27,13 @@ function init () {
   g=random(250);
   b=random(250);
   start_time=millis();
-
 }
+
 function draw() {
   clear(); //transparent background
   ds.render();
   let current_time = millis();
-    let timespane = 17 * 1000; // 10 seconds
+    let timespane = 17 * 1000; // 17 seconds
     if (current_time > start_time + timespane) { //condition to restart the sketch
         init();
     }
@@ -128,7 +128,7 @@ PenroseLSystem.prototype.render = function () {
       if( step == 'F') {
         //stroke(random(3,40),random(255),random(255),80);
         //stroke(88,100,122,80);
-        stroke(r,g,b,80);
+        stroke(r,g,b,50);
         //stroke(68, 130, 171,80);
         for(let j=0; j < this.repeats; j++) {
           strokeWeight(1.5);
