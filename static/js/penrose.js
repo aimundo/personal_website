@@ -3,9 +3,17 @@ let  ds, start_time;
 
 
 function setup() {
-    let canvas=createCanvas(window.innerWidth/3,window.innerHeight/2.2);
-    canvas.position(window.innerWidth/10, window.innerHeight/8,'fixed');
+  //change canvas size according to window size
+
+  if (displayWidth<550) {
+    let canvas=createCanvas(displayWidth/2.5,displayHeight/1.8);
+    canvas.position(displayWidth/10, displayHeight/2,'fixed');
+  } else {
+    let canvas=createCanvas(displayWidth/2.5,displayHeight/1.8);
+    canvas.position(displayWidth/10, displayHeight/7,'inherited');
     canvas.parent('penrose-holder');
+  }
+    //canvas.style('z-index', '1');
     init();
 }
 
