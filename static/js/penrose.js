@@ -9,8 +9,8 @@ function setup() {
     let canvas=createCanvas(displayWidth/2.5,displayHeight/1.8);
     canvas.position(displayWidth/10, displayHeight/2,'fixed');
   } else {
-    let canvas=createCanvas(displayWidth/2.5,displayHeight/2.5);
-    canvas.position(displayWidth/10, displayHeight/8,'inherited');
+    let canvas=createCanvas(displayWidth/2.5,displayHeight/2.1);
+    canvas.position(displayWidth/10, displayHeight/8.5,'inherited');
     canvas.parent('penrose-holder');
   }
     //canvas.style('z-index', '1');
