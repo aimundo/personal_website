@@ -1,0 +1,49 @@
+---
+title: 'Using Generalized Additive Models for Biomedical Longitudinal data'
+author: Ariel Mundo
+date: '2021-08-12'
+slug: GAMs-biomedical
+categories:
+  - R
+  - longitudinal data
+  - simulation
+tags:
+  - mgcv
+  - R
+subtitle: "When linear models don't YES"
+summary: ''
+authors: []
+lastmod: '2021-08-12T11:39:21-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+links:
+  - icon: github
+    icon_pack: fab
+    name: preprint repo
+    url: https://github.com/aimundo/GAMs-biomedical-research
+  - icon: github
+    icon_pack: fab
+    name: flashtalk repo
+    url: https://github.com/aimundo/RMedicine2021
+---
+
+## Description 
+
+This talk at the RMedicine 2021 Conference covers in a brief way the statistical treatment of longitudinal data with an emphasis on biomedical research, showing in a visual way the limitations of linear models (rm-ANOVa or LMEMs) and how generalized additive models (GAMs) are useful to analyze non-linear data.
+
+An in-depth coverage of this topic can be found in [this](https://www.biorxiv.org/content/10.1101/2021.06.10.447970v1) preprint from our lab ( the manuscript is currently under review).
+
+The GitHub repositories for the paper and the "lightning talk" can be accessed using the links above.
+
+```{r, echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics('r_medicine.jpg')
+```
+
+
+```{r, embed xaringan}
+xaringanExtra::embed_xaringan(url = "RMedicine2021/slides/RMedicine2021_slides.html", ratio = "16:9")
+```

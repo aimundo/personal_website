@@ -6,7 +6,18 @@
     <description>Recent content in Blog on Ariel Mundo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Adding JavaScript animations using p5.js</title>
+      <link>https://aimundo.netlify.app/blog/2021-07-25-testing-javascript-visualizations/</link>
+      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/2021-07-25-testing-javascript-visualizations/</guid>
+      <description>Disclaimer: I am no Javascript expert. The target audience for this post are those that want to add something extra to their site, but that like me, have very little knowledge of JavaScript.
+But let me say this: it’s doable, and that is the beauty of the Hugo Apéro theme, it is very well organized and makes it easy to follow!
+How the idea startedA couple weeks ago I read a Tweet from Alison Presmanes Hill where se commented on the beauty of Deisy Gysi’s site.</description>
+    </item>
+    
     <item>
       <title>Panicking over References</title>
       <link>https://aimundo.netlify.app/blog/panicking-over-references/</link>

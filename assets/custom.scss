@@ -25,3 +25,18 @@
        url('../fonts/arvo-v14-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
        url('..static/fonts/arvo-v14-latin-regular.svg#Arvo') format('svg'); /* Legacy iOS */
 }
+
+/* atkinson-hyperlegible-regular - latin */
+@font-face {
+  font-family: 'Atkinson Hyperlegible';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/atkinson-hyperlegible-v1-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/atkinson-hyperlegible-v1-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/atkinson-hyperlegible-v1-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v1-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/atkinson-hyperlegible-v1-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/atkinson-hyperlegible-v1-latin-regular.svg#AtkinsonHyperlegible') format('svg'); /* Legacy iOS */
+}
+

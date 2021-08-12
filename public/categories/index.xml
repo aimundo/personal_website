@@ -6,7 +6,34 @@
     <description>Recent content in Categories on Ariel Mundo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 23 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>longitudinal data</title>
+      <link>https://aimundo.netlify.app/categories/longitudinal-data/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/longitudinal-data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>https://aimundo.netlify.app/categories/r/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>simulation</title>
+      <link>https://aimundo.netlify.app/categories/simulation/</link>
+      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/simulation/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Bibtex</title>
       <link>https://aimundo.netlify.app/categories/bibtex/</link>
@@ -31,15 +58,6 @@
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://aimundo.netlify.app/categories/bookdown/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>https://aimundo.netlify.app/categories/r/</link>
-      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/categories/r/</guid>
       <description></description>
     </item>
     

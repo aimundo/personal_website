@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.85.0" />
+<title>Adding JavaScript animations using p5.js | Ariel Mundo</title>
+
+
+<meta property="twitter:site" content="@aimundo">
+<meta property="twitter:creator" content="@aimundo">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="">
+
+
+<meta property="og:site_name" content="Ariel Mundo">
+<meta property="og:title" content="Adding JavaScript animations using p5.js | Ariel Mundo">
+<meta property="og:description" content="" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://aimundo.netlify.app/blog/2021-07-25-testing-javascript-visualizations/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://aimundo.netlify.app/blog/sidebar-listing.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://aimundo.netlify.app/blog/sidebar-listing.jpg" >
+    
+    
+  <meta itemprop="name" content="Adding JavaScript animations using p5.js">
+<meta itemprop="description" content="Disclaimer: I am no Javascript expert. The target audience for this post are those that want to add something extra to their site, but that like me, have very little knowledge of JavaScript.
+But let me say this: it’s doable, and that is the beauty of the Hugo Apéro theme, it is very well organized and makes it easy to follow!
+How the idea startedA couple weeks ago I read a Tweet from Alison Presmanes Hill where se commented on the beauty of Deisy Gysi’s site."><meta itemprop="datePublished" content="2021-07-25T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-07-25T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1273">
+<meta itemprop="keywords" content="" />
+  
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/test.ico" type="image/x-icon">
+  <link rel="icon" href="/img/test.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.8f7fa8151c3f7d8327f2433a3d509664e660bac6f2123656a98c25d679cee16e.css" integrity="sha256-j3&#43;oFRw/fYMn8kM6PVCWZOZgusbyEjZWqYwl1nnO4W4=" media="screen">
+  
+  
+  <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://aimundo.netlify.app/" title="Home">
+      <img src="/img/test.png" class="dib db-l h2 w-auto" alt="Ariel Mundo">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talks/" title="Talks">Talks</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/resume/" title="resume">resume</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Adding JavaScript animations using p5.js</h1>
+        
+        <p class="f6 measure lh-copy mv1"></p>
+        <p class="f7 db mv0 ttu">July 25, 2021</p>
+
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+<script src="https://aimundo.netlify.app/blog/2021-07-25-testing-javascript-visualizations/index_files/header-attrs/header-attrs.js"></script>
+
+
+<!-- https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo -->
+<p>Disclaimer: I am no Javascript expert. The target audience for this post are those that want to add something <em>extra</em> to their site, but that like me, have very little knowledge of JavaScript.</p>
+<p>But let me say this: it’s doable, and that is the beauty of the Hugo Apéro theme, it is very well organized and makes it easy to follow!</p>
+<div id="how-the-idea-started" class="section level3">
+<h3>How the idea started</h3>
+<p>A couple weeks ago I read a Tweet from Alison Presmanes Hill where se commented on the beauty of Deisy Gysi’s <a href="https://deisygysi.github.io/">site</a>. And the site is truly beautiful, the background is mesmerizing! I was intrigued on how such animations could be implemented in a Hugo site.</p>
+<p>I am no programming wizard (faaaar from it), but if there’s <strong>one thing</strong> I have learned during my PhD is to find information. So, I decided to start my quest by googling “hugo background animation”. Among the first results that I could see, there was one that caught my eye: “Customizing a Hugo theme with an animated P5.js background” (which can be found <a href="https://nathan.exchange/posts/p5js-background-for-hugo/">here</a>).</p>
+<p>Upon doing some reading two things were clear:</p>
+<ul>
+<li><p>Such customization required JavaScript</p></li>
+<li><p>The post was a little bit old (2018).</p></li>
+</ul>
+<p>From seeing the structure of the folders described in the post I could tell that the Apero theme did not have the same structure. Moreover, because I knew that Hugo themes tend to have multiple changes over time, I was afraid that by making the proposed changes in the post I would end up messing things too much (it had happened before and I ended up burning everything to the ground from the Hugo Academic theme and migrated to the Apero theme, which had substantial benefits).</p>
+<p>But one thing was clear, this was doable. However, the first thing I wanted to know was what was this <code>p5.js</code> thing. Well, turns out that <a href="https://p5js.org/">p5</a> is a JavaScript (JS) library for creative coding. Watching the examples on the site was mindblowing! Take some time and look them up, because although most of them are in plain black and white, it’s easy to see the potential of using <code>p5</code> to create beautiful artwork.</p>
+<p>One of the examples is called <a href="https://p5js.org/examples/simulate-particles.html">“particles”</a>, and when I saw it I realized that it was very similar to Geisy’s website background. Actually, there is a library called “particles.js” that makes it easy to use and customize (see <a href="https://vincentgarreau.com/particles.js/">here</a>).</p>
+</div>
+<div id="the-quest-continues" class="section level3">
+<h3>The quest continues</h3>
+<p>I had a starting point, I wanted to use <code>p5.js</code>, but I could not find a thorough explanation of how to use the library on a Hugo site. I noticed that some people had asked similar questions in the Hugo community, but honestly I lacked the programming experience to understand the explanations given, or they were too vague (multiple times I found something along the lines of “can be implemented later”).</p>
+<p>However, one thing became apparent from reading these posts: If you are going to use JS on a Hugo site, the scripts need to be in a specific folder. I noticed most of the posts made reference to the root <strong>static/</strong> folder as the place where <code>.js</code> files need to be placed. I also ended up learning that because of the way Hugo works, it is recommended that any changes you make on your site regarding style (CSS, fonts, etc.) are to be placed in folders in the root directory (such as <code>static</code>, <code>assets</code>, etc), rather than altering the theme itself.</p>
+<p>When Hugo loads the site it looks on the root folder first and any changes you have made regarding style override the default theme settings. And because is easy to keep track of changes and additions that are made on the folders you create on the root directory rather than messing with the <code>themes/hugo-apero</code> folders, this saves you multiple headeaches later, which is something I can attest.</p>
+<p>Back to the question at hand, I stumbled on <a href="https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo">this</a> post, where someone asked about using something called <code>D3.js</code> in a Hugo site. Now, <code>D3.js</code> is not <code>p5.js</code> but there is a saying in Spanish that goes <em>un diablo se parece a otro</em>, which basically means that sometimes you can confuse two persons that look alike. In my naive mind, <code>D3.js</code> was close enough to <code>p5.js</code> and I thought that the procedure to implement the first had to work for the latter.</p>
+</div>
+<div id="what-you-need-to-do" class="section level3">
+<h3>What you need to do</h3>
+<p>OK, so here is where things get interesting. Say you want to add the “particles” example from p5.js to a blog post. The first thing you need to do is to copy the code that appears below the example on the <a href="https://p5js.org/examples/simulate-particles.html">site</a> and paste it in a file that we will call <code>particles.js</code>. The file needs to exist in a root folder called <code>static</code>, and for the sake of being organized we will further place it in a folder called <code>js</code>.
+In other words, the path is <code>../static/js/particles.js</code></p>
+<p>So far, so good. Now, say you create a new blog post, which you will coveniently create using the Blogdown ‘new post’ Addin in RStudio. Say you create a blog post titled “Testing p5.js” and that you are going to make it using a <code>.Rmd</code> file.</p>
+<p>Below the YAML header, you can write some text:</p>
+<pre><code>---
+title: Trying a p5.js animation
+author: &#39;&#39;
+date: &#39;&#39;
+slug: []
+categories: []
+tags: []
+---
+
+### Some clever text</code></pre>
+<p>Because HTML is supported in RMarkdown, first we need to call the p5.js library:</p>
+<pre><code>&lt;script src=&quot;https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js&quot;&gt;&lt;/script&gt; &lt;!-- load p5.js from CDN--&gt; </code></pre>
+<p>And then we will call our <code>particles.js</code> script:</p>
+<pre><code>&lt;script src = &quot;/js/particles.js&quot;&gt;&lt;/script&gt; &lt;!-- this will pick our script  --&gt;</code></pre>
+<p>Just by adding those two lines, you should be able to see the animation running <em>at the bottom</em> of the page.</p>
+<p>By default, <code>p5.js</code> objects (also called “sketches”) are added at the bottom of the page. Say you want to write some text, add a <code>p5.js</code> animation and continue writing below. How do you achieve this?</p>
+<p>You need to do two things:</p>
+<ul>
+<li>In the <code>.js</code> animation file you created (in this case <code>particles.js</code>) and that now lives in <code>static/</code> you need to find this line (assuming you haven’t changed anything yet):</li>
+</ul>
+<pre><code>createCanvas(720, 400);</code></pre>
+<p>And change it to:</p>
+<pre><code>var canvas = createCanvas(700, 470); //make it an object
+canvas.parent(&#39;particles-holder&#39;);</code></pre>
+<p>As I said before, I am no JS expert, but intuitively, we’re making the canvas a type of “object” we can use a function on. <code>p5.Element.parent()</code> function allows to move the sketch inside an HTML file. So now, when we call it in our blog post, you can have something like this:</p>
+<pre><code>#### Some clever text
+
+Here we have a particle simulation from p5.js.
+
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js&quot;&gt;&lt;/script&gt; &lt;!-- load p5.js from CDN--&gt; 
+&lt;script src = &quot;/js/particles.js&quot;&gt;&lt;/script&gt; &lt;!-- this will pick our script  --&gt;
+
+&lt;div id=&quot;particles-holder&quot;&gt; &lt;!-- this sets the position of the script --&gt;
+&lt;/div&gt;
+
+More text to come!</code></pre>
+<p>The result is what you see below, we have some text before the sketch, we call the sketch, and we write more text below.</p>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+<!-- load p5.js from CDN-->
+<script src = "/js/particles.js"></script>
+<p><!-- this will pick our script  --></p>
+<div id="particles-holder">
+<p><!-- this sets the position of the script --></p>
+</div>
+<p>As you can see, there is some work to do but it is honestly very rewardint to add such cool animations and visualizations to your site.</p>
+<p>Final thoughts:</p>
+<ul>
+<li><p>There are multiple ways of doing this. This is what worked for me this time, but I am sure more improvements can be done (as when you want multiple sketches on a page, which is covered <a href="https://joemckaystudio.com/multisketches/">here</a>).</p></li>
+<li><p>I recently migrated to the Hugo Apéro theme. I have to say that it is extremely well done. The Wowchemy Academic theme was usable, but things were confusing at times and documentation was, well, poor. It is nice to see a theme that makes customizations easy, and that is well structured.</p></li>
+</ul>
+</div>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">July 25, 2021</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">6 minute read, 1273 words</dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://aimundo.netlify.app/blog/panicking-over-references/">Panicking over References &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="aimundo/personal_website"
+          issue-term="title"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2021 Ariel Mundo
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/aimundo" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=3Ia93g4AAAAJ&amp;hl=en" title="google-scholar" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/amundortiz" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0002-6014-4538" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+</footer>
+
+      </div>
+    </body>
+</html>
