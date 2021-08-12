@@ -10,7 +10,7 @@ categories:
 tags:
   - mgcv
   - R
-subtitle: "When linear models don't YES"
+subtitle: "When linear models don't work"
 summary: ''
 authors: []
 lastmod: '2021-08-12T11:39:21-05:00'
@@ -44,6 +44,6 @@ knitr::include_graphics('r_medicine.jpg')
 ```
 
 
-```{r, embed xaringan}
-xaringanExtra::embed_xaringan(url = "RMedicine2021/slides/RMedicine2021_slides.html", ratio = "16:9")
+```{r, embed xaringan,echo=FALSE}
+## xaringanExtra::embed_xaringan(url = "https://aimundo.github.io/RMedicine2021/slides/RMedicine2021_slides.html#1", ratio = "4:3")
 ```
