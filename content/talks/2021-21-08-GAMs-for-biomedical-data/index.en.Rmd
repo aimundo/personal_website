@@ -45,5 +45,5 @@ knitr::include_graphics('r_medicine.jpg')
 
 
 ```{r, embed xaringan,echo=FALSE}
-## xaringanExtra::embed_xaringan(url = "https://aimundo.github.io/RMedicine2021/slides/RMedicine2021_slides.html#1", ratio = "4:3")
+ xaringanExtra::embed_xaringan(url = "https://aimundo.github.io/RMedicine2021/slides/RMedicine2021_slides.html#1", ratio = "4:3")
 ```
