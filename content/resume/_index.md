@@ -7,12 +7,12 @@ cascade:
   sidebar:
     show_sidebar_adunit: true
     text_link_label: View all projects
-    text_link_url: /project/
+    text_link_url: /resume/
 description: 
 layout: list-grid
 show_author_byline: false
 show_post_date: false
-show_post_thumbnail: false
+show_post_thumbnail: true
 title: Resume 
 
 ---

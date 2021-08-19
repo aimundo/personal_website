@@ -7,10 +7,9 @@ excerpt:
 layout: single
 show_post_thumbnail: false
 title: Resume
-
 ---
 
-You can see a PDF version of my resume [here](/resume/Resume_v1.pdf).
+ [Click here](/resume/Resume_v1.pdf).
  
  
 

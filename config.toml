@@ -132,11 +132,11 @@ enableEmoji = true
     title = "Talks"
     url = "/talks/"
     weight = 3
-  [[menu.header]]
-    name = "resume"
-   title = "resume"
-   url = "/resume/"
-    weight = 4
+  #[[menu.header]]
+    #name = "resume"
+   #title = "resume"
+   #url = "/resume/"
+    #weight = 4
  # [[menu.header]]
   #  name = "A collection"
    # title = "A collection"
