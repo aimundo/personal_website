@@ -1,5 +1,9 @@
 {{ define "main" }}
 {{ $page := . }}
+<!-- particles.js container -->
+<div id="penrose-holder">
+</div> <!-- stats - count particles -->
+<script src="{{ .Site.BaseURL }}js/penrose.js"></script>
 <main class="page-main pa4" role="main">
   <section class="page-content mw9 center">
     <div class="flex-l items-center" style="{{ if .Params.image_left }}flex-direction: row-reverse;{{ end }}">
