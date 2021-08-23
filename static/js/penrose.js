@@ -20,7 +20,7 @@ function setup() {
 //this function implements a timer to track the sketch
 function init () {
   ds = new PenroseLSystem();
-  frameRate(30);
+  frameRate(7);
     //please, play around with the following line
   ds.simulate(4);
   r=random(250);
@@ -33,7 +33,7 @@ function draw() {
   clear(); //transparent background
   ds.render();
   let current_time = millis();
-    let timespane = 17 * 1000; // 17 seconds
+    let timespane = 40 * 1000; // 17 seconds
     if (current_time > start_time + timespane) { //condition to restart the sketch
         init();
     }
