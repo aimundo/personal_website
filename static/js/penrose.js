@@ -131,7 +131,7 @@ PenroseLSystem.prototype.render = function () {
         stroke(r,g,b,50);
         //stroke(68, 130, 171,80);
         for(let j=0; j < this.repeats; j++) {
-          strokeWeight(1.5);
+          strokeWeight(3);
           line(0, 0, 0, -this.drawLength);
           noFill();
           translate(0, -this.drawLength);

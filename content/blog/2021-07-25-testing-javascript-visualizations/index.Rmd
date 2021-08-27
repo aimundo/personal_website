@@ -14,7 +14,7 @@ But let me say this: it's doable, and that is the beauty of the Hugo Apéro them
 
 ### How the idea started
 
-A couple weeks ago I read a Tweet from Alison Presmanes Hill where se commented on the beauty of Deisy Gysi's [site](https://deisygysi.github.io/). And the site is truly beautiful, the background is mesmerizing! I was intrigued on how such animations could be implemented in a Hugo site. 
+A couple weeks ago I read a Tweet from Alison Presmanes Hill where she commented on the beauty of Deisy Gysi's [site](https://deisygysi.github.io/). And the site is truly beautiful, the background is mesmerizing! I was intrigued on how such animations could be implemented in a Hugo site. 
 
 I am no programming wizard (faaaar from it), but if there's **one thing** I have learned during my PhD is to find information. So, I decided to start my quest by googling "hugo background animation". Among the first results that I could see, there was one that caught my eye: "Customizing a Hugo theme with an animated P5.js background" (which can be found [here](https://nathan.exchange/posts/p5js-background-for-hugo/)). 
 
