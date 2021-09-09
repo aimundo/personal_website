@@ -1,0 +1,35 @@
+---
+title: "GAMs in clinical data"
+format:
+  html:
+    theme: default
+    toc: true
+    number-sections: true
+---
+
+```{r, setup}
+library(here)
+library(ggplot2)
+library(tidyverse)
+library(readxl)
+library(mgcv)
+```
+
+Let's load the tumor size dataset. The data set comes from:
+Varna M, Bertheau P, Legres LG. Tumor Microenvironment in Human Tumor Xenografted Mouse Models. Journal of Analytical Oncology 2014; 3(3): 159-166
+
+And can be found in the Teaching of Statistics in the Health Sciences Portal here:
+https://www.causeweb.org/tshs/tumor-growth/
+
+
+```{r, visualize-data}
+#data<-read_excel("content/blog/tumorgrowth.xlsx")
+
+load("content/blog/tumorgrowth.RData")
+write.csv(tumorgrowth,"content/blog/tumorgrowth.csv")
+data<-read.csv("content/blog/tumorgrowth.csv")
+
+ggplot(data=data,aes(x=Day,y=Size))+
+    geom_point()+
+    facet_wrap(~Grp)
+```
