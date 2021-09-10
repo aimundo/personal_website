@@ -15,6 +15,8 @@ library(ggplot2)
 library(tidyverse)
 library(readxl)
 library(mgcv)
+library(viridis)
+library(gratia)
 ```
 
 Let's load the tumor size dataset. The data set comes from:
@@ -37,10 +39,14 @@ data<-read.csv(here("content/blog/tumorgrowth.csv"))
 
 #make variables a factor, if needed
 
-data$
+data$Grp<-as.factor(data$Grp)
+data$ID<-as.factor(data$ID)
 
-ggplot(data=data,aes(x=Day,y=Size))+
-    geom_point()+
+#make an object to store the visualization
+raw_plot<-ggplot(data=data,aes(x=Day,y=Size))
+
+#simple plot
+raw_plot+geom_point()+
     facet_wrap(~Grp)+
     theme_bw()
 ```
@@ -49,8 +55,23 @@ There are four treatment groups. Let's see how tumors change over time by adding
 
 ```{r,plot data}
 
-ggplot(data=data,aes(x=Day,y=Size))+
-    geom_point(aes(shape))+
+raw_plot+
+    geom_point(aes(color=ID),size=2, alpha=0.4,show.legend=FALSE)+
+    geom_line(aes(color=ID),size=1,alpha=0.5,show.legend=FALSE)+
+    theme_bw()+
     facet_wrap(~Grp)+
-    theme_bw()
+        scale_color_viridis_d(option="turbo")
+```
+
+
+Now, if we want to fit a GAM to the data, the syntax needs to be the following:
+
+```{r, gam-1}
+gam1 <- gam(Size ~ Grp+s(Day, by = Grp, k = 10),
+          method='REML',
+          data  = data)
+
+plot.gam(gam1)
+appraise(gam1)
+gam.check(gam1)
 ```
