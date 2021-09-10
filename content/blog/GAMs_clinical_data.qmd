@@ -5,6 +5,8 @@ format:
     theme: default
     toc: true
     number-sections: true
+editor_options: 
+  chunk_output_type: console
 ---
 
 ```{r, setup}
@@ -21,15 +23,34 @@ Varna M, Bertheau P, Legres LG. Tumor Microenvironment in Human Tumor Xenografte
 And can be found in the Teaching of Statistics in the Health Sciences Portal here:
 https://www.causeweb.org/tshs/tumor-growth/
 
-
-```{r, visualize-data}
-#data<-read_excel("content/blog/tumorgrowth.xlsx")
+The chunk below can be omitted as the repo already contains the `.csv` file.
+```{r, load data and create csv file}
 
 load("content/blog/tumorgrowth.RData")
 write.csv(tumorgrowth,"content/blog/tumorgrowth.csv")
-data<-read.csv("content/blog/tumorgrowth.csv")
+```
+
+
+```{r,plot data}
+
+data<-read.csv(here("content/blog/tumorgrowth.csv"))
+
+#make variables a factor, if needed
+
+data$
 
 ggplot(data=data,aes(x=Day,y=Size))+
     geom_point()+
-    facet_wrap(~Grp)
+    facet_wrap(~Grp)+
+    theme_bw()
+```
+
+There are four treatment groups. Let's see how tumors change over time by adding lines and making the points specific per each subject.
+
+```{r,plot data}
+
+ggplot(data=data,aes(x=Day,y=Size))+
+    geom_point(aes(shape))+
+    facet_wrap(~Grp)+
+    theme_bw()
 ```
