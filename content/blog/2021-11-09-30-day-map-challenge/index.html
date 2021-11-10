@@ -1,0 +1,58 @@
+---
+title: 'First post after a long hiatus? Make a map!'
+author: ''
+date: '2021-11-09'
+slug: []
+categories: []
+tags: []
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<!-- https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo -->
+<p>I have been in a long hiatus from posting anything on my website. Just when I thought I was gaining some momentum with making regular posts a lot of things started to happen (experiments, paper submissions, corrections…).
+So today’s post is going to be simple. I saw Amit Levinson’s <a href="https://twitter.com/Amit_Levinson/status/1457940340149739520">Tweet</a> in the #30DayMapChallenge about Israel’s 3d elevation map and it inspired me to do something similar. My goal here was to create an elevation map of my home country, Guatemala.</p>
+<p>First, I had to get the <code>sph</code> file with the map data. I used the data provided by <a href="https://www.diva-gis.org/">DIVA_GIS</a>, unzipped the contents and placed everything in a folder. I am by no means a map expert, but it seems that not only the <code>.shp</code> file is necessary to visualize the map; the other files (<code>dbf</code>, <code>prj</code>, etc) are also necessary. So first we load our packages, and read the map data.</p>
+<p>The syntax was hard for me to understand (a geocomputation illiterate), but I found information <a href="https://geocompr.robinlovelace.net/spatial-class.html#crs-intro">here</a> about the puzzling <code>4326</code> in the <code>st_transform</code>line. It basically indicates which Coordinate Reference System (CRS) is to be used (4326 is the code for the Spatial Reference System Identifier EPSG).</p>
+<pre class="r"><code>library(elevatr)
+library(rayshader)
+library(sf)
+library(here)
+library(rgdal)
+library(magick)
+
+gtdata&lt;-read_sf(&quot;content/blog/2021-11-09-30-day-map-challenge/data/GTM_adm0.shp&quot;)
+
+#Transform to st. Spatial Reference System Identifier (SRID). EPSG:4326
+gtdata&lt;-st_transform(gtdata,4326)</code></pre>
+<p>And now we move to the fun part. Using <code>{rayshader}</code> we will first get the raster elevation data using <code>get_elev_raster</code> and then transform the raster data to a matrix using <code>raster_to_matrix</code>. Finally, we will plot the map in 3d and save it.</p>
+<pre class="r"><code>#elevation data
+
+gtraster &lt;- get_elev_raster(locations = gtdata, z = 9, clip = &quot;locations&quot;)
+
+ #Convert to matrix for rayshader plotting
+gtrayshader &lt;- raster_to_matrix(gtraster)
+
+#plot in 3d
+gtrayshader %&gt;% 
+  sphere_shade(texture = &quot;bw&quot;) %&gt;% 
+  plot_3d(gtrayshader, zscale = 50, 
+          fov = 0, 
+          theta = 0, 
+          zoom = 0.9, 
+          phi = 50, 
+          windowsize = c(1000, 1000))
+
+#save it
+ 
+render_snapshot(filename=&quot;content/blog/2021-11-09-30-day-map-challenge/Guatemala&quot;,
+                title_text = &quot;Elevation map of  Guatemala&quot;,
+                title_offset = c(150,850),
+                title_size = 50,
+                title_font = &#39;Helvetica&#39;
+                )</code></pre>
+<p>And the result? This beauty:</p>
+<p><img src="Guatemala.png" /></p>
+<p>And I have to say, achieving this in 9 lines of code (minus loading packages and function options) is truly impressive! You can check the excellent <code>{rayshader}</code> documentation <a href="https://www.rayshader.com/">here</a> here.</p>
+<p>Well, that is all for now, but I will be back soon (hopefully) with another post.</p>
