@@ -5,6 +5,7 @@ date: '2021-07-25'
 slug: []
 categories: []
 tags: []
+summary: "After seeing some examples, I try to implement a p5.js animation to my site"
 ---
 <!-- https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo -->
 

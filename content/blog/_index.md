@@ -14,7 +14,7 @@ description: "This is a fully featured blog that supports categories, \ntags, se
 layout: list-sidebar
 show_author_byline: true
 show_post_date: true
-show_post_thumbnail: true
+show_post_thumbnail: false
 sidebar:
   author: Ariel Mundo
   description: "_Cosas veredes, amigo Sancho_. \n \n \n This is a place where I write my thoughts and experiences about coding (mainly in R), research, and life in general."

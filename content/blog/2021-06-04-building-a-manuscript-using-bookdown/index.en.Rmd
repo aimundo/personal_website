@@ -10,11 +10,12 @@ categories:
 tags:
   - bookdown
   - LaTeX
-subtitle: 'Lessons from experience'
-summary: ''
+subtitle: "Lessons from experience when creating a manuscript."
+summary: 'The joys and challenges of switching from Word to Bookdown to create a manuscript.'
 authors: []
 lastmod: '2021-06-04T11:39:21-05:00'
 featured: no
+draft: false
 image:
   caption: ''
   focal_point: ''
