@@ -1,0 +1,50 @@
+---
+title: 'Writing a manuscript using {bookdown}: A short guide for the life sciences'
+author: ''
+date: '2022-04-29'
+slug: []
+categories: []
+summary: "I describe here a general approach to create an academic manuscript, in a way that can be applicable for life sciences research"
+tags: []
+links:
+  - icon: github
+    icon_pack: fab
+    name: repo
+    url: https://github.com/aimundo/personal_website/tree/main/content/blog/2021-11-09-30-day-map-challenge
+---
+<!-- https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo -->
+
+## Why?
+
+Let me start this post by sharing the reasons that lead me to write it. I have been an avid R user for some time now, and it has been my default option to clean, analyze and manipulate data, and create graphs. I started using {rmarkdown} to create reproducible reports for my analyses but it never occurred to me that I could write a complete paper with it. 
+That changed a couple years ago when I wrote a paper about generalized additive models for biomedical data using R. 
+For that paper, I learned about {bookdown} and how you could create books (or other publication with a long format). That was my first experience creating a paper using solely R, and I made many mistakes along the way (but I learned a lot).
+
+Specifically, it was hard for me to know how to structure the overall project structure. Now, this probably wouldn't be a huge deal had I planned to only share the final paper, but back then I was starting to learn about Open Science and I recognized that I had to make the **whole project** reproducible. By trial and error, I figured a way to structure the whole project in such a way that, if I wanted to recreate the whole paper, I only had to click the knit button to run all the analyses, and recreate the whole document. 
+
+However, the next roadblock came when I worked in my final paper (as a PhD student) and I realized that probably one of the reasons why {bookdown} is not used more frequently by people in life sciences is because we deal with biological data and images, and we can think that {bookdown} and other R packages are good for writing documents that are only composed of text and R-generated figures, but that they don't work when you have imaging files (e.g., microscopy images, pictures of equipment, etc). However, as it turns out, you can add images to a document made with {bookdown}! And by using other packages such as {patchwork} you can compose great figures that combine statistical analyses, imaging data and more. 
+
+## Purpose of this post
+
+Based on my experience, and the fact that there don't seem to be much resources on how to use {bookdown} that are targeted for people working in the life sciences (biology, biomedical research, etc.) I wanted to write a short guide that others could use to switch from Word to {bookdown} to write manuscripts. 
+
+Now, the obliged disclaimer I have to make is that I am sharing what I have found that works for me. It might be the case that some of the things I describe are not applicable in some situations. But I am sure that with some experimentation, you can tailor the tools I talk about here for your own needs!
+
+## What you need to have
+
+In order to understand the steps I will be talking about, I am assuming you have:
+
+- Installed RStudio (can be downloaded [here](https://www.rstudio.com/))
+- Familiarity with R syntax
+- 
+
+## First things first
+
+The first thing you want to do is to create a Project for your paper. This will make things easier to navigate, and will save you a lot of trouble later on. To do this, you need to open RStudio and go to File &#8594; New Project &#8594; New Directory &#8594; New Project. Choose a directory name and the location where you want the project to be (Documents, Desktop, etc.). In this post I won't cover how to do a project using version control, so ignore the "Create git repository", and "Use renv with this project" options. Once you have named your project, select "Open in new session" and click **Create Project**.
+
+The main advantage of a project is that it allows you to store all your files and run your scripts in a convenient way. We'll talk about this a little more later on.
+
+## How to structure your project?
+
+Once you click "Create Project" you'll notice that a new session opens and that in the **Files** panel in RStudio you now have something that looks like this:
+![](images/files_panel.png)
