@@ -14,37 +14,75 @@ links:
 ---
 <!-- https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo -->
 
-## Why?
+# Why?
 
-Let me start this post by sharing the reasons that lead me to write it. I have been an avid R user for some time now, and it has been my default option to clean, analyze and manipulate data, and create graphs. I started using {rmarkdown} to create reproducible reports for my analyses but it never occurred to me that I could write a complete paper with it. 
-That changed a couple years ago when I wrote a paper about generalized additive models for biomedical data using R. 
-For that paper, I learned about {bookdown} and how you could create books (or other publication with a long format). That was my first experience creating a paper using solely R, and I made many mistakes along the way (but I learned a lot).
+Let me start this post by sharing the reasons that lead me to write it. I have been an avid R user for some time now, and R has been my default option to clean, analyze, manipulate data, and create graphs. I started using {rmarkdown} to create reproducible reports for my analyses but it never occurred to me that I could write a complete paper with it. 
+However, that changed a couple years ago I wrote a paper about generalized additive models for biomedical data using R. 
+For that paper, I learned about {bookdown}, and how you could create books (or other long publication formats) with it. That was my first experience creating a paper using solely R, and I made many mistakes along the way (also learned a lot).
 
-Specifically, it was hard for me to know how to structure the overall project structure. Now, this probably wouldn't be a huge deal had I planned to only share the final paper, but back then I was starting to learn about Open Science and I recognized that I had to make the **whole project** reproducible. By trial and error, I figured a way to structure the whole project in such a way that, if I wanted to recreate the whole paper, I only had to click the knit button to run all the analyses, and recreate the whole document. 
+Specifically, it was hard for me to know how organize the document in a way that made things easier to track. Now, this organization issue probably wouldn't had been a huge deal had I planned to only share the final paper, but back then I was starting to learn about Open Science and I decided that I had to make the **whole project** reproducible. By trial and error, I figured a way to structure the whole project in such a way that, if I wanted to recreate the whole paper, I only had to click the knit button once.
 
-However, the next roadblock came when I worked in my final paper (as a PhD student) and I realized that probably one of the reasons why {bookdown} is not used more frequently by people in life sciences is because we deal with biological data and images, and we can think that {bookdown} and other R packages are good for writing documents that are only composed of text and R-generated figures, but that they don't work when you have imaging files (e.g., microscopy images, pictures of equipment, etc). However, as it turns out, you can add images to a document made with {bookdown}! And by using other packages such as {patchwork} you can compose great figures that combine statistical analyses, imaging data and more. 
+However, the next roadblock came when I worked in my final paper (as a PhD student) and I realized that probably one of the reasons why {bookdown} is not used more frequently by people in life sciences is because we deal with biological data and images. What I mean by this is that many people know about {rmarkdown}, {bookdown}, and other R packages are good for writing documents; however, these packages are typically associated with documents that are only composed of text and R-generated figures. But when you have imaging data and files (e.g., microscopy images, pictures of equipment, etc), you want to be able to create figures using those files and the first impression is that you can't do that with {bookdown}. However, as I discovered, you can add imaging data to a document made with {bookdown}! Combining this fact and packages such as {patchwork} and good 'ole {ggplot2} it turns out you can compose great figures that combine statistical analyses, imaging data and more, and you can create a paper that is reproducible with one click. How neat is that? 
 
 ## Purpose of this post
 
-Based on my experience, and the fact that there don't seem to be much resources on how to use {bookdown} that are targeted for people working in the life sciences (biology, biomedical research, etc.) I wanted to write a short guide that others could use to switch from Word to {bookdown} to write manuscripts. 
+Based on the experiences I have described before, and the fact that there don't seem to be much resources on how to use {bookdown} to create reproducible papers in the life sciences (biology, biomedical research, etc.), I wanted to write a short guide that others could use to switch from Word (or Google Docs) to {bookdown} to write manuscripts. 
 
-Now, the obliged disclaimer I have to make is that I am sharing what I have found that works for me. It might be the case that some of the things I describe are not applicable in some situations. But I am sure that with some experimentation, you can tailor the tools I talk about here for your own needs!
+Now, the obliged disclaimer: I am sharing what I have found that works for me. It might be the case that some of the things I describe are not applicable in some situations. But I am sure that with some experimentation, you can tailor the tools I talk about here for your own needs!
 
-## What you need to have
+## Is it worth it?
 
-In order to understand the steps I will be talking about, I am assuming you have:
+I realize that someone might say: Why should I change the way I write my papers? Why can't I just keep using Word?
 
-- Installed RStudio (can be downloaded [here](https://www.rstudio.com/))
-- Familiarity with R syntax
-- 
+Well, let me try to answer with another question: Why are you using Word? Is it because is the **best** tool you can use or is it because is the same tool you have been using over and over?. The truth is that most of us working in the most of the STEM fields (Physics and Math being the general exception) stick with writing tools that we learned back in high school (which is when you typically learn to do some acceptable documents in Word). 
 
-## First things first
+But as it turns out, those tools are not the best to create documents that can be easily reproduced (opening PC-created Word documents in a Mac, anyone?). And I don't think I have to convince anyone when I say that for formatting, Word **sucks**. Have you ever tried to move a figure a couple of millimeters in a document that you have painstakingly formatted? If so, your reaction was probably this:
 
-The first thing you want to do is to create a Project for your paper. This will make things easier to navigate, and will save you a lot of trouble later on. To do this, you need to open RStudio and go to File &#8594; New Project &#8594; New Directory &#8594; New Project. Choose a directory name and the location where you want the project to be (Documents, Desktop, etc.). In this post I won't cover how to do a project using version control, so ignore the "Create git repository", and "Use renv with this project" options. Once you have named your project, select "Open in new session" and click **Create Project**.
+![](images/giphy.gif)
 
-The main advantage of a project is that it allows you to store all your files and run your scripts in a convenient way. We'll talk about this a little more later on.
+One of the main benefits of using writing tools like {bookdown} is that, on a basic level, you don't have to mess with document formatting because this will be automatically handled by the computer. Of course, the learning curve is steeper when switching from Word because your document organization will become programatic, and the first time you do it you will probably miss the blank page-menu-ruler-font tools environment from Word, but trust me when I say that as you progress, you won't miss these tools anymore because the formatting aspects they handle will be programatically handled in your document by {bookdown}. Additionally, you will always create documents that look _good_ (either PDF or HTML) and if you even want to, you can create a Word output if you want to share your document with someone that is more familiar with that format! (But as always, there are some minor formatting issues...)
+
+Now, eventually you might want to learn $\LaTeX$ to customize your document, add fancy stuff and be able to debug some issues that come with complex documents, but as a start knowing the basics is enough and will simplify the way you do things.
+
+## What we will learn
+
+To make things I will divide this guide in five areas:
+
+- How to organize the project
+- Document structure
+- Creating figures I
+- Creating figures II
+- Managing references
+
+
+## What you need 
+
+Here are the prerequisites to understand (and apply) this guide:
+
+- Install [RStudio](https://www.rstudio.com/) and [R](https://rstudio-education.github.io/hopr/starting.html) (this last link has instructions to install both)
+- Be familiarity with R syntax, specifically with {ggplot2} and {patchwork} 
+- Install {bookdown} (instructions can be found [here](https://bookdown.org/yihui/bookdown/get-started.html))
+- Install a $\LaTeX$ distribution (for PDF): I recommend using [TinyTex](https://yihui.org/tinytex/)
+
+Don't feel overwhelmed by the steps above, because they don't take THAT long to complete, and once you're done, you're all set! Also, keep in mind that beyond those prerequisites I make no further assumptions, meaning that I will try to explain each step as clearly as possible. 
+Having said that, let's start the guide!
+
+# Part 1
+## How to organize the project
+
+The first thing you want to do is to create a Project for your paper. This will make things easier to navigate, and will save you a lot of trouble later on. Projects are a neat option of RStudio, which is why you needed to install the IDE before starting the guide. To create the project, you need to open RStudio and go to File &#8594; New Project &#8594; New Directory &#8594; New Project. Choose a directory name and the location where you want the project to be (Documents, Desktop, etc.). In this post I won't cover how to do a project using version control, so ignore the "Create git repository", and "Use renv with this project" options. Once you have named your project, select "Open in new session" and click **Create Project**.
+
+The main advantage of a Project for a paper is that it allows you to store all your files and run your scripts in the same directory, which is called every time you open the Project. This avoids confusion as you add more files to your paper, and saves you the time required to "Set a working directory".  
 
 ## How to structure your project?
 
 Once you click "Create Project" you'll notice that a new session opens and that in the **Files** panel in RStudio you now have something that looks like this:
 ![](images/files_panel.png)
+
+There is nothing else in your project, just a project file (`.Rproj`) which contains the Project options. The first thing you want to do is to create the directories that will contain the parts of your work. From my experience, for a project that will combine some work in R for statistical analysis (and therefore, some R scripts) and microscopy or other type of imaging data, a project structure could contain the following directories:
+
+- code: here you can store all your scripts, either in the directory itself or in another directory 
+- data: This directory stores the raw csv files that you call in your scripts for cleaning, data manipulation and analysis
+- figures: if your paper includes 
+- manuscripts
+
