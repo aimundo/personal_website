@@ -40,7 +40,7 @@ For that paper, I learned about {bookdown}, and how you could create books (or o
 </div>
 <div id="what-we-will-learn" class="section level2">
 <h2>What we will learn</h2>
-<p>To make things I will divide this guide in five areas:</p>
+<p>I will divide this guide in five areas:</p>
 <ul>
 <li>How to organize the project</li>
 <li>Document structure</li>
@@ -48,18 +48,19 @@ For that paper, I learned about {bookdown}, and how you could create books (or o
 <li>Creating figures II</li>
 <li>Managing references</li>
 </ul>
+<p>Each area will cover an aspect of the process of building a paper that is reproducible and that can be created using R. If I decide that there is something else I need to add, I certainly will add more areas to the list.</p>
 </div>
 <div id="what-you-need" class="section level2">
 <h2>What you need</h2>
 <p>Here are the prerequisites to understand (and apply) this guide:</p>
 <ul>
 <li>Install <a href="https://www.rstudio.com/">RStudio</a> and <a href="https://rstudio-education.github.io/hopr/starting.html">R</a> (this last link has instructions to install both)</li>
-<li>Be familiarity with R syntax, specifically with {ggplot2} and {patchwork}</li>
+<li>Be familiar with R syntax, specifically with {ggplot2} and {patchwork}</li>
 <li>Install {bookdown} (instructions can be found <a href="https://bookdown.org/yihui/bookdown/get-started.html">here</a>)</li>
 <li>Install a <span class="math inline">\(\LaTeX\)</span> distribution (for PDF): I recommend using <a href="https://yihui.org/tinytex/">TinyTex</a></li>
 </ul>
 <p>Don’t feel overwhelmed by the steps above, because they don’t take THAT long to complete, and once you’re done, you’re all set! Also, keep in mind that beyond those prerequisites I make no further assumptions, meaning that I will try to explain each step as clearly as possible.
-Having said that, let’s start the guide!</p>
+Having said that, let’s start the guide! In this post I will cover Project Organization.</p>
 </div>
 </div>
 <div id="part-1" class="section level1">
@@ -73,12 +74,23 @@ Having said that, let’s start the guide!</p>
 <h2>How to structure your project?</h2>
 <p>Once you click “Create Project” you’ll notice that a new session opens and that in the <strong>Files</strong> panel in RStudio you now have something that looks like this:
 <img src="images/files_panel.png" /></p>
-<p>There is nothing else in your project, just a project file (<code>.Rproj</code>) which contains the Project options. The first thing you want to do is to create the directories that will contain the parts of your work. From my experience, for a project that will combine some work in R for statistical analysis (and therefore, some R scripts) and microscopy or other type of imaging data, a project structure could contain the following directories:</p>
+<p>There is nothing else in your project, just a project file (<code>.Rproj</code>) which contains the Project options. Now, the first thing you want to do is to create the directories that will contain the parts of your work. From my experience, is best to “keep things apart”.
+What I mean by “keeping things apart” is that you create directories for the different components of the paper; for a project that will combine some work in R for statistical analysis (and therefore, some R scripts) and microscopy or other type of imaging data a project could contain the following directories:</p>
 <ul>
-<li>code: here you can store all your scripts, either in the directory itself or in another directory</li>
-<li>data: This directory stores the raw csv files that you call in your scripts for cleaning, data manipulation and analysis</li>
-<li>figures: if your paper includes</li>
-<li>manuscripts</li>
+<li><strong>code</strong>: Here you can store all your scripts, either in the directory itself or in another subdirectory</li>
+<li><strong>data</strong>: Stores the raw csv files that you call in your scripts for cleaning, data manipulation and analysis</li>
+<li><strong>figures</strong>: Imaging data, as well as schematics and/or diagrams</li>
+<li><strong>manuscripts</strong>: Here you can store successive iterations of your paper as you make corrections.</li>
 </ul>
+<p>If you create these folders, your project will look like this:</p>
+<p><img src="images/files_panel_directories.png" /></p>
+<p>The rationale for the different directories is that typically, what tends to change (sometimes a lot) is the written part of the manuscript itself, but the data and the statistical analyses are usually iterated a few times and after that, they just need to be incorporated into the manuscript. The same idea holds for the “figures” directory, where you create the figures (this can be in a different environment such as Inkscape, BioRender, etc. ) and later on you only need to incorporate them into the manuscript.</p>
+<p>Let’s assume an scenario where you have completed your data analyses and figures, and have some scripts in “code” that use the csv files in the “data” directory. Now you are ready to start writing your manuscript. The way I have found that this work best is to create a directory within “manuscripts” that you can call “paper_v1”. You finish this first draft and send it for internal review (your advisor in the case of a grad student, collaborators, etc.). You get some feedback and decide you want to start v2 of the paper.</p>
+<p>Here is where the advantage of “keeping this apart” apparent, because all you need to do is create another directory within “manuscripts” for the second draft (let’s assume this directory is called “paper_v2”), and modify the written part of the manuscript. The neat thing here is that your code and data stay in the same directories and they just need to be called again (I will talk in detail about this later on), there is no need of re-writring scripts and moving files with code and data over and over again!</p>
+<p><img src="images/smart.gif" /></p>
+</div>
+<div id="summing-it-up" class="section level2">
+<h2>Summing it up</h2>
+<p>In this first post, I covered the benefits of using {bookdown} to create reproducible (academic) papers, and how “keeping this apart” by creating directories for your data, code and manuscript files makes thing easier to follow. In the next post, I will cover how to structure the paper itself! See ya!</p>
 </div>
 </div>
