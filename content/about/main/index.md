@@ -6,7 +6,7 @@ use_featured: false # if false, use most recent by date
 number_categories: 1 # set to zero to exclude
 show_intro: true
 intro: |
- I am a PhD Candidate in the Department of Biomedical Engineering at the University of Arkansas, Fayetteville in the [Muldoon Lab](https://muldoonlab.uark.edu/). My research interests lie at the intersection of open science, biology, and statistics in order to better understand biological processes. My PhD started by developing optical tools to study cancer, but gradually shifted to a Statistics-centered approach to analyze biological data (using generalized additive models to analyze longitudinal data). I am particularly interested in studying the metabolic and molecular changes caused by disease over time using a combination of Statistics, Data Science and data visualization. <br><br> **You can see my Resume** [**here**](Resume_v1.pdf) **and my CV** [**here**](Academic_CV.pdf) 
+ I hold a PhD in Biomedical Engineering from the University of Arkansas, Fayetteville. My research interests lie at the intersection of Open Science, Biology, and Statistics in order to better understand how biological processes change over time. <br><br>  &rarr [**CV**](Academic_CV_UdeM.pdf) 
 
 show_outro: false
 outro: |

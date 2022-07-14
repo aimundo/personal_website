@@ -1,5 +1,5 @@
 ---
-title: 'Writing a manuscript using {bookdown}: A short guide for the life sciences'
+title: 'Writing a manuscript using {bookdown}: A short guide for the life sciences (Part I)'
 author: ''
 date: '2022-04-29'
 slug: []
