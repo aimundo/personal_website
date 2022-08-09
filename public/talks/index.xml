@@ -6,7 +6,17 @@
     <description>Recent content in Talks on Ariel Mundo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/talks/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/talks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Statistics and Reproducibility in Biomedical Research</title>
+      <link>https://aimundo.netlify.app/talks/reproducibility-biomedical/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/talks/reproducibility-biomedical/</guid>
+      <description>DescriptionI had the privilege talking this year at the 2022 Toronto Workshop on Reproducibility Conference. I shared some thoughts on the struggle for reproducibility in Biomedical Research. Because I prepared the talk while completing my dissertation, I did not have time to make some nice xaringan slides (sorry, I know). But, the talk was recorded and can be found in the link above.
+The motivation for this talk came from my experience and (constant) struggle with Statistics during the first years of my PhD.</description>
+    </item>
+    
     <item>
       <title>Using Generalized Additive Models for Biomedical Longitudinal data</title>
       <link>https://aimundo.netlify.app/talks/gams-biomedical/</link>

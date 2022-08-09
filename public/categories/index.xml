@@ -6,7 +6,34 @@
     <description>Recent content in Categories on Ariel Mundo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Biomedical Research</title>
+      <link>https://aimundo.netlify.app/categories/biomedical-research/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/biomedical-research/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reproducibility</title>
+      <link>https://aimundo.netlify.app/categories/reproducibility/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://aimundo.netlify.app/categories/statistics/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/categories/statistics/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>longitudinal data</title>
       <link>https://aimundo.netlify.app/categories/longitudinal-data/</link>

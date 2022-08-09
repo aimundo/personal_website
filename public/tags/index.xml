@@ -6,7 +6,25 @@
     <description>Recent content in Tags on Ariel Mundo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 12 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 23 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Reproducibility</title>
+      <link>https://aimundo.netlify.app/tags/reproducibility/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/tags/reproducibility/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Statistics</title>
+      <link>https://aimundo.netlify.app/tags/statistics/</link>
+      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/tags/statistics/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>mgcv</title>
       <link>https://aimundo.netlify.app/tags/mgcv/</link>

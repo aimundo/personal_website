@@ -6,16 +6,41 @@
     <description>Recent content in Blog on Ariel Mundo</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 25 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Writing a manuscript using {bookdown}: A short guide for the life sciences (Part II)</title>
+      <link>https://aimundo.netlify.app/blog/2022-07-10-writing-a-manuscript-using-bookdown-2/</link>
+      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/2022-07-10-writing-a-manuscript-using-bookdown-2/</guid>
+      <description>How to structure your directories to make writing easy</description>
+    </item>
+    
+    <item>
+      <title>Writing a manuscript using {bookdown}: A short guide for the life sciences (Part I)</title>
+      <link>https://aimundo.netlify.app/blog/2022-04-29-writing-a-manuscript-using-bookdown/</link>
+      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/2022-04-29-writing-a-manuscript-using-bookdown/</guid>
+      <description>I describe here a general approach to create an academic manuscript, in a way that can be applicable for life sciences research</description>
+    </item>
+    
+    <item>
+      <title>First post after a long hiatus? Make a map!</title>
+      <link>https://aimundo.netlify.app/blog/2021-11-09-30-day-map-challenge/</link>
+      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://aimundo.netlify.app/blog/2021-11-09-30-day-map-challenge/</guid>
+      <description>I create a map from Guatemala using {rayshader}</description>
+    </item>
+    
     <item>
       <title>Adding JavaScript animations using p5.js</title>
       <link>https://aimundo.netlify.app/blog/2021-07-25-testing-javascript-visualizations/</link>
       <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
       
       <guid>https://aimundo.netlify.app/blog/2021-07-25-testing-javascript-visualizations/</guid>
-      <description>Disclaimer: I am no Javascript expert. The target audience for this post are those that want to add something extra to their site, but that like me, have very little knowledge of JavaScript.
-But let me say this: it’s doable, and that is the beauty of the Hugo Apéro theme, it is very well organized and makes it easy to follow!
-How the idea startedA couple weeks ago I read a Tweet from Alison Presmanes Hill where se commented on the beauty of Deisy Gysi’s site.</description>
+      <description>After seeing some examples, I try to implement a p5.js animation to my site</description>
     </item>
     
     <item>
@@ -33,8 +58,7 @@ How the idea startedA couple weeks ago I read a Tweet from Alison Presmanes Hil
       <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
       
       <guid>https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/</guid>
-      <description>Why?This is the second post about working with Bookdown and my experience on the process (first post is here). This post focuses on how I found that was easy to compartmentalize my work and some tips I learned along the way (I will probably write about some other things in the future as well).
-Use “chapters”When I started working with Bookdown I was making a single document for my manuscript.</description>
+      <description>The joys and challenges of switching from Word to Bookdown to create a manuscript.</description>
     </item>
     
     <item>

@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr"><head>
+  
+                           
+     
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="generator" content="Hugo 0.85.0" />
+<title>Writing a manuscript using {bookdown}: A short guide for the life sciences (Part II) | Ariel Mundo</title>
+
+
+<meta property="twitter:site" content="@aimundortiz">
+<meta property="twitter:creator" content="@aimundortiz">
+
+
+
+
+
+
+
+  
+    
+  
+<meta name="description" content="">
+
+
+<meta property="og:site_name" content="Ariel Mundo">
+<meta property="og:title" content="Writing a manuscript using {bookdown}: A short guide for the life sciences (Part II) | Ariel Mundo">
+<meta property="og:description" content="" />
+<meta property="og:type" content="page" />
+<meta property="og:url" content="https://aimundo.netlify.app/blog/2022-07-10-writing-a-manuscript-using-bookdown-2/" />
+<meta property="og:locale" content="en">
+
+
+
+
+    
+        <meta property="og:image" content="https://aimundo.netlify.app/blog/sidebar-listing.jpg" >
+        <meta property="twitter:card" content="summary_large_image">
+        <meta name="twitter:image" content="https://aimundo.netlify.app/blog/sidebar-listing.jpg" >
+    
+    
+  <meta itemprop="name" content="Writing a manuscript using {bookdown}: A short guide for the life sciences (Part II)">
+<meta itemprop="description" content="How to structure your directories to make writing easy"><meta itemprop="datePublished" content="2022-07-10T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2022-07-10T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1888">
+<meta itemprop="keywords" content="" />
+  
+<script type="application/javascript">
+var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+var doNotTrack = (dnt == "1" || dnt == "yes");
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-J62R0LPVKY', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  <!--[if IE]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <link rel="shortcut icon" href="/img/test.ico" type="image/x-icon">
+  <link rel="icon" href="/img/test.ico" type="image/x-icon">
+  
+  
+  <link rel="stylesheet" href="/style.main.min.73102e4eaa8100dd2d0dc55eb28be5006c374fc898aae09744ebe486448523ff.css" integrity="sha256-cxAuTqqBAN0tDcVesovlAGw3T8iYquCXROvkhkSFI/8=" media="screen">
+  
+  
+  <script src="/panelset.min.078a92db9bd3228df502db3d9e0453c3cf3d910abe3f8deca0ad196c7071ad41.js" type="text/javascript"></script>
+  
+  
+  <script src="/main.min.38a0323c5b0bbb611c4874ba2d8fdaba57d20cc2b0d704b30250c235ba8b6d49.js" type="text/javascript"></script>
+</head>
+<body>
+      <div class="grid-container">
+<header class="site-header pt4 pb2 mb4 bb b--transparent ph5 headroom z-max" role="banner">
+  <nav class="site-nav db dt-l w-100" role="navigation">
+    <a class="site-brand db dtc-l v-mid link no-underline w-100 w-33-l tc tl-l" href="https://aimundo.netlify.app/" title="Home">
+      <img src="/img/test.png" class="dib db-l h2 w-auto" alt="Ariel Mundo">
+    </a>
+    <div class="site-links db dtc-l v-mid w-100 w-47-l tc tr-l mt3 mt0-l ttu tracked">
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/about/" title="About me">About</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 active" href="/blog/" title="Blog">Blog</a>
+      
+        
+        
+        
+      <a class="link f6 f5-l dib pv1 ph2 " href="/talks/" title="Talks">Talks</a>
+      
+      
+    </div>
+  </nav>
+</header>
+
+<main class="page-main pa4" role="main">
+  <section class="page-content mw7 center">
+    <article class="post-content pa0 ph4-l">
+      <header class="post-header">
+        <h1 class="f1 lh-solid measure-narrow mb3 fw4">Writing a manuscript using {bookdown}: A short guide for the life sciences (Part II)</h1>
+        
+        <p class="f6 measure lh-copy mv1"></p>
+        <p class="f7 db mv0 ttu">July 10, 2022</p>
+
+      
+      <div class="ph0 pt5">
+        
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+      
+  <a class="btn-links mr2 ba dib" href="https://github.com/aimundo/manuscript_example" target="_blank" rel="noopener"><i class="fab fa-github fa-lg fa-fw mr2"></i>repo</a>
+
+
+      </div>
+      
+
+      </header>
+      <section class="post-body pt5 pb4">
+        
+
+
+<!-- https://stackoverflow.com/questions/60746090/can-d3-js-visualizations-be-served-using-hugo -->
+<div id="quick-refresher" class="section level1">
+<h1>Quick Refresher</h1>
+<p>It took a while for me to get back to this (sorry, a lot of things happening in the world right now). But this is the second entry on my approach on how to use {bookdown} to create a manuscript for a paper in the life sciences (biology, biomedical engineering, etc.).Last time I covered the reasons why we should stop using Word to write papers, and a basic structure for the project.</p>
+<p>I realized I needed to create a Repo to keep track of the steps I am describing here, so if you click on the GitHub on top of this blog entry, it should direct you to the Repo that I will be using as an example. So far, our project looks like this:</p>
+<p><img src="images/files_panel_directories.png" /></p>
+<p>We have created a project in R (using RStudio), and have directories for figures, data, code, and manuscripts. In this post, I will cover how we can structure the different sections of the paper.</p>
+<p><strong>Disclaimer</strong> A large part of the motivation for writing these entries about writing a manuscript comes from my desire to keep a record of the things I’ve done, it is possible that my suggestions here might not align with your needs or your own approach to writing a paper using the tools I describe here. However, I believe the overall description can be useful to people that are interested in creating reproducible documents using R, and you can certainly customize everything to fit your needs!</p>
+<p>With that said, let me provide the rationale for the approach I’ll follow here.</p>
+</div>
+<div id="the-approach" class="section level1">
+<h1>The Approach</h1>
+<p>Let’s say that you have now a directory structure like the one in the image above, and you want to start writing the <em>actual</em> paper. If you have already have clean data files, and scripts for your Stats, what usually needs to be iterated (sometimes, a lot) are the paper sections themselves. That is, you might write a section, get some feedback and re-write such section again, but the data and Stats remain the same. If that is the case, one approach that has worked for me is to create another directory inside the <em>manuscripts</em> directory, which will contain the first version of the paper. Let’s say we call this new subdirectory <em>manuscript_v1</em>. Once you create it, your directory will look like this:</p>
+<p><img src="images/manuscript_v1_view.PNG" /></p>
+<p>Inside this folder, we create another folder (<em>sections</em>) that will contain the file(s) that make the different parts of our manuscript. For example, the typical sections of a paper are:</p>
+<ul>
+<li>Introduction/Background</li>
+<li>Materials and Methods</li>
+<li>Results</li>
+<li>Discussion</li>
+<li>Conclusion</li>
+</ul>
+<p>Why do we need to create different files? Having a file for each section makes things a lot easier! (The first time I used {bookdown} I started writing the whole paper on a single file and it gets messy and confusing quickly).</p>
+<p>So let’s create another folder inside <em>manuscript_v1</em> called <em>sections</em>.</p>
+<p>The files that {bookdown} uses to create a document are RMarkdown files (*.Rmd). There are multiple ways to customize an Rmd file (more on that later), but for the time being we just need to create a plain, empty file. To create an empty Rmd file in RStudio, you need to go to File -&gt; New File -&gt; R Markdown -&gt; Click on “Create Empty Document”. To keep things tidy, we will add a number to the files we will create. Once you have created and saved all your files, your directory should look like this:</p>
+<p><img src="images/Manuscript_sections.PNG" /></p>
+<p>Now the fun begins (writing)! How do we write in {bookdown}? Briefly, we only need to add some symbols when writing to indicate the sections of our document. For example, if we go to the <em>01_Introduction.Rmd</em> file, we could start writing something like this:</p>
+<p><img src="images/Introduction_writing_example.PNG" /></p>
+<p>Notice that we added a # before ‘Background’ and ## before ‘Another paragraph’. These symbols basically indicate that they are titles for a section and a subsection, respectively (I won’t cover all the details of Markdown syntax, as an excellent guide can be found <a href="https://bookdown.org/yihui/bookdown/usage.html">here</a>).</p>
+<p>The take home point is that once you have created the files, you basically just need to start typing your text and indicate your section and subsection titles. Now, you have created the overall structure of the manuscript (I’ll cover references in another post), but we can’t get a document still, as we haven’t told {bookdown} what formatting options we want.</p>
+</div>
+<div id="how-we-do-it" class="section level1">
+<h1>How we do it</h1>
+<p>Alright, so we need to create a file that will tell {bookdown} how to assemble the pieces of the manuscript, and what formatting options we want. To do this, we can create an Rmd file on the <em>manuscript_v1</em> directory. The rationale for this is that in this way, we week the parts of the document on a different directory and this avoids having lots of files in the same location (i.e., you will only see and deal with files that are associated with formatting, but the pieces of the paper will be in the <em>sections</em> folder).</p>
+<p>Let’s call the file that assembles the whole thing “Complete_paper.Rmd”, and let’s create this file on the <em>manuscript_v1</em> directory. To do this, you will go to File -&gt; New File -&gt; R Markdown <strong>but</strong>, unlike previous times, just click “OK” without changing the default options that appear below:</p>
+<p><img src="images/RStudio_menu.PNG" /></p>
+<p>(Also don’t worry if the Title appears as “Untitled”, we will fix this later).</p>
+<p>Once you create the file, it should look like this:</p>
+<p><img src="images/Default_Rmd.PNG" /></p>
+</div>
+<div id="the-yaml-header" class="section level1">
+<h1>The YAML Header</h1>
+<p>At the top the document is the YAML header, where we provide formatting instructions to {bookdown}. Notice that the default output at this point is HTML, but generally speaking, we are interested in creating a PDF document so we will edit the YAML section to pass some formatting options that are more convenient for a paper.</p>
+<p><strong>NOTE</strong>: The YAML section is very useful but it can be <em>very</em> tricky sometimes because blank spaces <strong>do</strong> matter. If the spaces in a line are wrong, the document may not be compiled or the formatting can be ignored. I can’t count the number of times I had a problem with a document and spent a lot of time trying to figure out what part of the YAML header was wrong!</p>
+<p><img src="images/error.gif" /></p>
+<p>You can ignore the content of the default Rmd template, as we will cover how to create figures later on, and we already know how to create title sections and add text.</p>
+<p>A modified YAML header looks like this:</p>
+<pre><code>title: &#39;Manuscript&#39;
+output:  
+  bookdown::pdf_document2:
+    fontsize: 12pt
+    fontfamily: helvetica
+    keep_tex: yes #keep LaTeX file for submission
+    fig_caption: yes #allows captions in figures
+    toc: false #do not include table of contents
+    extra_dependencies:
+      subfig: null #allows for subfigures
+      breqn: null #line breaks for long equations
+      caption: [&quot;font={small}&quot;] #size of the figure captions
+    includes:
+      in_header: latex_docs/preamble.sty #additional LaTeX formatting
+  bookdown::word_document2:
+    fig_caption: yes #figure caption
+    reference_docx: &quot;docx_template.docx&quot;
+    keep_md: yes
+  bookdown::html_document2:
+    css: &quot;html_docs/style.css&quot; #style for the HTML document
+csl: bibliography/american-medical-association.csl #style for references
+bibliography: bibliography/refs.bib #references
+link-citations: yes #adds links to the citations
+urlcolor: blue
+&#39;&#39;: default
+---
+</code></pre>
+<p>I have added comments to each line to help understand what each option does.
+In particular, with this YAML header we are able to create a PDF, docx, and HTML outputs if desired. The docx output is very useful for internal reviews, as is possible that other users not familiarized with {bookdown} find it easier to add comments in a Word document (formatting in Word is bad, though).</p>
+<p>Additionally, we also now have a couple of additional directories, where formatting instructions for our different outputs will be stored. Note that we are including a LaTeX <em>preamble.sty</em> file. The reason for this is that to get a PDF, {bookdown} creates first a LaTeX file (more about how this is done <a href="https://bookdown.org/yihui/bookdown/pandoc.html">here</a>). You can edit the preamble file to add authors, or change formatting options if desired (each line also has comments to help understand the purpose of each LaTeX package that is being called).</p>
+<p>The LaTeX preamble is just added so some options that are by default not available can be used as well (line numbers, double spacing, and a section for authors). LaTeX can be very complex (!), and in my experience, is not used much in the biomed/biology fields, but one of its major advantages is that it automates a lot of the formatting. Don’t freak out, we are trying to use the minimum possible of options to get a paper that is easy to ready and that looks great.</p>
+<p>Additionally, we created a directory with a CSS file for HTML output formatting instructions, and added a file called “docx_template.docx”, which {bookdown} will use to create a Word output. Essentially, we have all of our bases covered regarding formatting!</p>
+<p>Toward the end of the header, there are two lines that control the references and reference formatting, but we won’t cover that yet.</p>
+</div>
+<div id="assembling-the-document" class="section level1">
+<h1>Assembling the Document</h1>
+<p>So much for a “short guide” eh? But we’re almost done with this part of the tutorial! The final part we need to look at is the body of our document, where we have added the instructions on how we want to assemble the final document. The body of the document now has some R code chunks that look like this:</p>
+<pre><code>{r child=&#39;sections/01-Introduction.Rmd&#39;}</code></pre>
+<p>The purpose of this chunks is only to call the pieces of our paper in the order we want them to put them in a single document! This is great because in this way you compartmentalize your work, and if a section needs to be fixed, you open the corresponding file, edit it, and compile a new document. With a paper, where there are lot of text, images, and code, a single document can be very hard to navigate. Luckily for us {bookdown} eases the work.</p>
+</div>
+<div id="knitting-the-document" class="section level1">
+<h1>Knitting the document</h1>
+<p>Finally, we are ready to compile the document! In this post I will only cover the PDF output, as I believe this is the most common type of document that suits a paper. Because in our YAML header we have added the option to create a pdf document (pdf_document2), we can select to create that output by clicking on arrow that is next to the “Knit” button:</p>
+<p><img src="images/knit.PNG" /></p>
+<p>By selecting “Knit to pdf_document2”, we will be able to get our desired PDF output. When the document is ready, a new window will open with the document! With the instructions we provided to {bookdown}, our output looks like this:</p>
+<p><img src="images/Initial_paper.PNG" /></p>
+<p>Pretty, isn’t it? Note that each section is numbered, we have line numbers (thanks LaTeX!), double space, and we have a section for the authors and their information. The rest of the sections beyond the Background in this case are empty, but each section and subsection (if added) will be formatted exactly in the same manner. A little lengthy at first, but I guess by now it is clear why using {bookdown} is largely beneficial when creating a paper: you are not fighting with formatting issues, and your document can be replicated if created in any other machine (for example, a reviewer may want to see if is possible to replicate your paper. Trust me, it happened to me!).</p>
+</div>
+<div id="recap" class="section level1">
+<h1>Recap</h1>
+<p>In this post I covered how to structure the sections of a paper using {bookdown}, adding some formatting options using YAML, and how a PDF output looks. In my next post, I will cover how to create figures using R, where you can combine images, and figures with statistical analyses together!</p>
+</div>
+
+        
+        <details closed class="f6 fw7 input-reset">
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Posted on:</dt>
+    <dd class="fw5 ml0">July 10, 2022</dd>
+  </dl>
+  <dl class="f6 lh-copy">
+    <dt class="fw7">Length:</dt>
+    <dd class="fw5 ml0">9 minute read, 1888 words</dd>
+  </dl>
+  
+  
+  
+  <dl class="f6 lh-copy">
+    <dt class="fw7">See Also:</dt>
+    
+  </dl>
+</details>
+
+      </section>
+      <footer class="post-footer">
+        <div class="post-pagination dt w-100 mt4 mb2">
+  
+  
+  
+  
+    <a class="next dtc pl2 tr v-top fw6"
+    href="https://aimundo.netlify.app/blog/2022-04-29-writing-a-manuscript-using-bookdown/">Writing a manuscript using {bookdown}: A short guide for the life sciences (Part I) &rarr;</a>
+  
+</div>
+
+      </footer>
+    </article>
+    
+      
+<div class="post-comments pa0 pa4-l mt4">
+  
+  <script src="https://utteranc.es/client.js"
+          repo="aimundo/personal_website"
+          issue-term="title"
+          theme="boxy-light"
+          label="comments :crystal_ball:"
+          crossorigin="anonymous"
+          async
+          type="text/javascript">
+  </script>
+  
+</div>
+
+    
+  </section>
+</main>
+<footer class="site-footer pv4 bt b--transparent ph5" role="contentinfo">
+  <nav class="db dt-l w-100">
+    <p class="site-copyright f7 db dtc-l v-mid w-100 w-33-l tc tl-l pv2 pv0-l mv0 lh-copy">
+      &copy; 2022 Ariel Mundo
+      <span class="middot-divider"></span>
+      Made with <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/hugo-apero/" rel="dct:source">Hugo Apéro</a></span>.
+      <br />
+      
+Based on <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title"><a xmlns:dct="http://purl.org/dc/terms/" href="https://github.com/formspree/blogophonic-hugo" rel="dct:source">Blogophonic</a></span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://formspree.io" property="cc:attributionName" rel="cc:attributionURL">Formspree</a>.
+    </p>
+    
+    <div class="site-social-links db dtc-l v-mid w-100 w-33-l tc pv2 pv0-l mv0">
+      <div class="social-icon-links" aria-hidden="true">
+  
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://github.com/aimundo" title="github" target="_blank" rel="noopener">
+      <i class="fab fa-github fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://scholar.google.com/citations?user=3Ia93g4AAAAJ&amp;hl=en" title="google-scholar" target="_blank" rel="noopener">
+      <i class="ai ai-google-scholar fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+      
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://twitter.com/amundortiz" title="twitter" target="_blank" rel="noopener">
+      <i class="fab fa-twitter fa-lg fa-fw"></i>
+    </a>
+  
+    
+    
+    
+    
+    
+    
+    
+      
+    
+    <a class="link dib h1 w1 ml0 mr2 f6 o-90 glow" href="https://orcid.org/0000-0002-6014-4538" title="orcid" target="_blank" rel="noopener">
+      <i class="ai ai-orcid fa-lg fa-fw"></i>
+    </a>
+  
+</div>
+
+    </div>
+    
+    <div class="site-links f6 db dtc-l v-mid w-100 w-67-l tc tr-l pv2 pv0-l mv0">
+      
+      <a class="dib pv1 ph2 link" href="/license/" title="License">License</a>
+      
+      <a class="dib pv1 ph2 link" href="/contact/" title="Contact form">Contact</a>
+      
+    </div>
+  </nav>
+</footer>
+
+      </div>
+    </body>
+</html>
