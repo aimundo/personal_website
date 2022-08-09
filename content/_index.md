@@ -2,14 +2,14 @@
 action_label: MORE ABOUT ME &rarr;
 action_link: /about
 action_type: text
-description: I am a Postdoctoral Fellow in the lab of [Dr. Bouchra Nasri](https://www.bouchrarnasri.com/) at the University of Montreal, where I work with longitudinal biomedical data. I received my PhD in Biomedical Engineering from the University of Arkansas, Fayetteville under the mentorship of [Dr.Tim Muldoon](https://muldoonlab.uark.edu/people/). I am an avid R user, focused on making my work reproducible and open. 
+description: I am a researcher working at the intersection of data science, biomedical research, and statistics to better understand how biological processes change over time. Open science and research reproducibility are core principles of my work, and to this end I am an avid R user and advocate. I can also spend too much time trying to choose a color palette for a {ggplot2} plot.
 images:
 image_left: true
 show_action_link: true
 show_social_links: true
 text_align_left: false
 title: Ariel Mundo
-subtitle: PhD, Biomedical Engineering
+subtitle: Postdoctoral Fellow, Université de Montréal
 type: home
 ---
 
