@@ -11,6 +11,8 @@ text_align_left: true
 title: Ariel Mundo O.
 subtitle: Postdoctoral Fellow, Université de Montréal
 type: home
+#images:
+#    - img/avatar_resized.png
 ---
 
 ** index doesn't contain a body, just front matter above.
