@@ -8,7 +8,7 @@ image_left: true
 show_action_link: true
 show_social_links: true
 text_align_left: false
-title: Ariel Mundo
+title: Ariel Mundo Ortiz
 subtitle: Postdoctoral Fellow, Université de Montréal
 type: home
 ---
