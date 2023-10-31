@@ -1,27 +1,27 @@
 
-let  ds, start_time;
+//let  ds, start_time;
 
 
-function setup() {
+//function setup() {
   //change canvas size according to window size
 
-  if (displayWidth<550) {
-    let canvas=createCanvas(displayWidth/2.5,displayHeight/1.8);
-    canvas.position(displayWidth/10, displayHeight/2,'fixed');
-  } else {
-    let canvas=createCanvas(displayWidth/2.5,displayHeight/2.1);
-    canvas.position(displayWidth/10, displayHeight/8.5,'inherited');
-    canvas.parent('penrose-holder');
-  }
+//  if (displayWidth<550) {
+//    let canvas=createCanvas(displayWidth/2.5,displayHeight/1.8);
+//    canvas.position(displayWidth/10, displayHeight/2,'fixed');
+//  } else {
+//    let canvas=createCanvas(displayWidth/2.5,displayHeight/2.1);
+ //   canvas.position(displayWidth/10, displayHeight/8.5,'inherited');
+//    canvas.parent('penrose-holder');
+//  }
     //canvas.style('z-index', '1');
-    init();
-}
+ //   init();
+//}
 
 //this function implements a timer to track the sketch
-function init () {
-  ds = new PenroseLSystem();
-  frameRate(7);
-    //please, play around with the following line
+//function init () {
+ // ds = new PenroseLSystem();
+ // frameRate(7);
+//    //please, play around with the following line
   ds.simulate(4);
   r=random(250);
   g=random(250);
