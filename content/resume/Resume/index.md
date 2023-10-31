@@ -9,7 +9,7 @@ show_post_thumbnail: false
 title: Resume
 ---
 
- [Click here](/resume/Resume_v1.pdf).
+ [Click here](/resume/Mundo Ortiz, Ariel.pdf).
  
  
 
