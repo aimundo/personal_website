@@ -9,7 +9,7 @@ show_post_thumbnail: false
 title: Resume
 ---
 
- [Click here](/resume/Mundo Ortiz, Ariel.pdf).
+ A complete resume can be found [HERE](Mundo_Ariel_nov_2024.pdf).
  
  
 
