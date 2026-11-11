@@ -1,0 +1,166 @@
+---
+output:  
+  pdf_document:
+    template: "C:/Users/User/Documents/resume/templates/template.tex"
+    keep_tex: true
+geometry: margin=0.5in
+
+title: "Resume"
+author: Ariel Mundo Ortiz
+jobtitle: "Research Associate"
+address: "McGill University"
+fontawesome: yes
+email: ariel.mundoortiz@mcgill.ca
+#github: aimundo
+#twitter: aimundortiz
+#osf: "Enter 5 digit osf string here"
+phone: "+1 438 875 9203"
+web: aimundo.rbind.io
+updated: yes
+
+keywords: R Markdown, academic CV, template
+
+fontfamily: mathpazo
+fontfamilyoptions: sc, osf
+fontsize: 10pt
+linkcolor: blue
+urlcolor: blue
+---
+
+
+
+# Academic Appointments
+
+**McGill University** _School of Population and Global Health_ Montréal, QC
+ 
+_Research Associate_ \hfill October 2026-Present
+
+
+**Centre de recherche du CHUM (CRCHUM)** Montréal, QC
+
+_Postdoctoral Fellow_  \hfill January 2024- October 2026
+
+
+**Université de Montréal** _ESPUM_ Montréal, QC
+
+
+_Postdoctoral Fellow_   \hfill July 2022- December 2023
+
+
+**Universidad Rafael Landivar** Guatemala
+
+_Teaching Assistant Professor_  \hfill January 2016- July 2017
+
+
+_Adjunct Professor_ \hfill January 2013- July 2017
+
+
+
+# Education
+
+*University of Arkansas*, PhD. Biomedical Engineering \hfill August 2017- May 2022
+
+*Universidad Rafael Landivar*, B.S. Chemical Engineering (_cum laude_) \hfill January 2005- December 2009
+
+
+# Other Relevant Experience
+
+**Lacteos Balcanicos Glad**
+
+_Assistant Plant Engineer_ \hfill January 2012 - July 2012
+
+
+# Publications
+## Journal Articles
+
+Emond Jean-Philippe, Cheung Vincent Weng-Jy, **Mundo Ortiz, Ariel I.** et al. "Older age and sex differences in the proportion of vital signs flagged as abnormal". PloS One (May 2026). https://doi.org/10.1371/journal.pone.0349936
+
+**Mundo Ortiz, Ariel I.**, Emond Jean-Philippe, Cheung Vincent Weng-Jy, Saeed Sahar, Desmarais Philippe, Larivière François, Hétu Pierre-Olivier & Nguyen Quoc Dinh. "The impact of pathological fluctuations versus biological variation on the interpretation of laboratory values". _Practical Laboratory Medicine_ (November 2025). https://doi.org/10.1016/j.plabm.2025.e00511.
+
+Cheung Vincent Weng-Jy, Libotte Michaël, Nguyen Patrick Viet-Quoc, Minh Vu Thien-Tuong, Émond Jean-Philippe, **Mundo Ortiz Ariel I.**, Desmarais Philippe,Nguyen Quoc Dinh. "Preliminary feasibility and development of a heart rate-based mobility and activity scale for hospitalized older adults". _The Journals of Gerontology: Series A_ (November 2025) https://doi.org/10.1093/gerona/glaf212
+
+El-Mousawi Fatima, **Mundo Ortiz Ariel I.**, Berkat Rawda, Nasri Bouchra. "The Impact of Flood Adaptation Measures on Affected Population’s Mental Health: A mixed method Scoping Review". _Disaster Medicine and Public Health Preparedness_ (2024).  https://doi.org/10.1101/2023.04.27.23289166 
+
+
+**Mundo Ortiz Ariel I.**, Nasri Bouchra. "Socio-demographic determinants of COVID-19 vaccine uptake in Ontario: Exploring differences across the Health Region model". _Vaccine_ (2024). https://doi.org/10.1016/j.vaccine.2024.02.045.
+
+
+Molla Jeta, Sekkak Idriss, **Mundo Ortiz Ariel I.**, Moyles Iain, Nasri Bouchra. “Mathematical modeling of mpox: a scoping review”.  _One Health_ (2023). https://doi.org/10.1016/j.onehlt.2023.100540
+
+**Mundo Ortiz Ariel I.**, Muhammad Abdussaboor, Balza Kerlin, Nelson Christopher E., Muldoon Timothy J. “Longitudinal examination of perfusion and angiogenesis markers in primary colorectal tumors shows distinct signatures for metronomic and maximum-tolerated dose strategies”. _Neoplasia_ (2022). https://doi.org/10.1016/j.neo.2022.100825
+
+**Mundo Ortiz  Ariel I.**, Tipton John R., Muldoon  Timothy J. “Generalized additive models to analyze non-linear trend sin biomedical longitudinal data using R: Beyond repeated measures ANOVA and Linear Mixed Models.” _Statistics in Medicine_ (2022). https://doi.org/10.1002/sim.9505
+
+**Mundo Ortiz  Ariel I.**, Greening  Gage, Fahr  Michael J., Hale  Lawrence N., Bullard  Elizabeth, Rajaram  Narasimhan, and Muldoon Timothy J. “Diffuse reflectance spectroscopy to monitor murine colorectal tumor progression and therapeutic response.” _Journal of Biomedical Optics_ (2020). https://doi.org/10.1117/1.JBO.25.3.035002
+
+Greening Gage, **Mundo Ortiz Ariel I.**,  Rajaram Narasimhan,  Muldoon Timothy  J.  “Sampling  depth  of  a  diffuse  re-flectance spectroscopy probe forin-vivophysiological quantification of murine subcutaneous tumor allografts”. _Journal of Biomedical Optics_ (2018). https://doi.org/10.1117/1.JBO.23.8.085006
+
+## Conference Presentations
+
+**Mundo Ortiz, Ariel I.** "Parallel computing in R to analyze big health data". RMedicine 2026 Conference. May 2026. 
+
+**Mundo Ortiz, Ariel I.** "Reproducible papers in the life sciences using R". _CANSSI Statistical Software Conference_. November 2022. Recording: https://www.youtube.com/watch?v=4yRAR9fS3pg
+
+**Mundo Ortiz, Ariel I.**. "Statistics and Reproducibility in Biomedical Research". _2022 Toronto Workshop on Reproducibility_. Toronto, ON. February 2022. Recording: https://www.youtube.com/watch?v=Fvkp20X5xwA
+
+**Mundo Ortiz, Ariel I.**, Muldoon, Timothy J. "Longitudinal optical and molecular quantification provides insight into the effect of different dosing strategies in colorectal cancer". _2022 Biophotonics Congress: Biomedical Optics_. Fort Lauderdale, FL, USA, April 2022.
+
+**Mundo Ortiz, Ariel I.** "Statistics and Reproducibility in Biomedical Research: Why we need both". Toronto Workshop on Reproducibility, University of Toronto, February 2022. Recording available [here](https://www.youtube.com/watch?v=Fvkp20X5xwA).
+
+**Mundo Ortiz, Ariel I.** "Using generalized additive models for biomedical longitudinal data. _When linear models don't work_". RMedicine 2021 Conference. Recording: https://tinyurl.com/39epnrp6 Repository (slides and data): https://aimundo.rbind.io/talks/gams-biomedical/
+
+**Mundo Ortiz, Ariel I.**, Abdussaboor Muhammad, and Timothy J. Muldoon. "Optical and molecular longitudinal tracking of primary colorectal murine tumors shows differences in the angiogenic response to maximum-tolerated and metronomic approaches." In Label-free Biomedical Imaging and Sensing (LBIS) 2021, vol. 11655, p. 116551C. _International Society for Optics and Photonics_, 2021. https://doi.org/10.1117/12.2576906
+
+**Mundo Ortiz, Ariel I.**, Elizabeth Bullard, Kyle P. Quinn, and Timothy J. Muldoon. "Optical spectroscopic and imaging biomarkers of ulcerative colitis disease progression and remission (Conference Presentation)." In Multiscale Imaging and Spectroscopy, vol. 11216, p. 1121605. _International Society for Optics and Photonics_, 2020. https://doi.org/10.1117/12.2543369
+
+**Mundo Ortiz, Ariel I.**, Gage J. Greening, and Timothy Muldoon. "Characterization of a multimodal endoscopically deployable veterinary spectroscopy and imaging probe to determine therapeutic response in a murine orthotopic tumor model." In Label-free Biomedical Imaging and Sensing (LBIS) 2019, vol. 10890, p. 108901L. _International Society for Optics and Photonics_, 2019.
+
+
+# Awards and Recognition
+
+_Fields Institute: Mathematics for Public Health Festival (MfPHFest)_ \hfill October 2022
+
+Received funding to attend the MfPHFest conference and present postdoctoral work done in the field of Statistics. (CAD 1,500)
+
+_Centre de recherches mathématiques (CRM) MfPH-CRM Postdoctoral Fellowship_ \hfill July 2022
+
+Received postdoctoral fellowship for one year to analyze public health and behavioral data (CAD 50,000)
+
+_BME Rising Scholar_ \hfill June 2022
+
+Selected by the committee of the BME Scholars Program at Washington University in St. Louis to receive mentorship about pathways and professional success in academic careers. Award included paid travel, conference attendance and honorarium. 
+
+_Professional Awareness, Advancement, and Development (PADD) Scholar_ \hfill 2020-2021 
+ 
+ Received funding and participated in the PAAD program to supplement my graduate education in persuasive speaking, commercialization, and data science (USD 1,500).
+ 
+ _OMNI Endowed International Scholarship_ \hfill 2020
+
+Granted as a scholar fulfilling the mission of the OMNI Center in Fayetteville (USD 500)
+
+_Fulbright Faculty Development Scholarship_ \hfill 2017-2019
+
+Scholarship covered all costs of my PhD for the first two years. Only two scholarships awarded for that period in the whole country. (USD 78,000)
+
+# Grants
+
+_Canada Institutes of Health Research (CIHR)_ \hfill 2023
+
+Co-investigator in the grant "epidemiological modelling of behavioural impact on mpox mitigation strategies" lead by Prof. Nasri from Université de Montréal. Funding secured: CAD 412,000.
+A record of the grant can be found in the  \href{https://webapps.cihr-irsc.gc.ca/decisions/p/project_details.html?applId=481271&lang=en}{CIHR funding decision database}.
+
+
+_Arkansas Biosciences Institute 2021 seed grant competition _ \hfill 2021
+
+Main author on a proposal to examine gene expression and optically derived markers in a mouse model of colorectal cancer.
+Funding secured: USD 30,000.
+
+# Languages
+
+- Spanish: Native speaker
+
+- English: Full professional competency
+
+- French: Full professional competency
+
+

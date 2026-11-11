@@ -1,0 +1,7 @@
+---
+title: "CV"
+---
+
+[View the resume PDF](Resume_Ariel_Mundo_Nov13.pdf){.btn .btn-primary}
+
+*Note: This is the PDF included in the original Hugo repository. Replace it with your current CV before publishing.*

@@ -1,0 +1,10 @@
+---
+title: "Talks"
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+page-layout: full
+---
+
+Selected presentations and talks.

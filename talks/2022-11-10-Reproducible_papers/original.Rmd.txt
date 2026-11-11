@@ -1,0 +1,48 @@
+---
+title: 'Reproducible papers in the life sciences using R'
+author: Ariel Mundo
+date: '2022-11-10'
+slug: Reproducible-papers
+categories:
+  - Life Sciences
+  - Reproducibility
+  - R
+tags:
+  - Statistics
+  - Reproducibility
+subtitle: "Can you do that with R?!"
+summary: ''
+authors: []
+lastmod: '2022-03-04T11:39:21-05:00'
+featured: no
+image:
+  caption: ''
+  focal_point: ''
+  preview_only: no
+projects: []
+links:
+  - icon: github
+    icon_pack: fab
+    name: repo
+    url: https://github.com/aimundo/manuscript_example
+  - icon: github
+    icon_pack: fab
+    name: slides
+    url: https://aimundo.github.io/CANSSI_SSC/slides/CANSSI_SSC.pdf
+---
+
+## Description 
+
+This talk at the 2022 CANSSI Statistical Software Conference is intended for researchers in the life sciences, who can benefit from using R to create manuscripts that are reproducible.
+
+When I started to use R to create manuscripts, I was under the impression that R was mainly for "Stats people". I quickly realized that that was not the case because {bookdown} provided all the tools required to create a paper that was reproducible and where I didn't have to worry about formatting issues.
+
+However, one major block remained: How could I create a figure like the ones I had seen routinely in papers that combined images (from tissue, cells, pictures, or diagrams) with graphs summarizing data and statistical analyses? For some time, I thought it wasn't possible. But as the saying goes "life finds a way". And that's how this talk came about!
+
+Note: The links above are for the GitHub repo that contains all the files to create a manuscript, and the slides for the talk at the conference.
+
+
+```{r, echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics('CANSSI.png')
+```
+

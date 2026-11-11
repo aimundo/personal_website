@@ -1,0 +1,33 @@
+---
+title: Using Generalized Additive Models for Biomedical Longitudinal data
+date: '2021-08-12'
+description: When linear models don't work
+categories:
+- R
+- longitudinal data
+- simulation
+execute:
+  eval: false
+  warning: false
+  message: false
+format:
+  html:
+    toc: true
+---
+
+## Description 
+
+This talk at the RMedicine 2021 Conference covers in a brief way the statistical treatment of longitudinal data with an emphasis on biomedical research, showing in a visual way the limitations of linear models (rm-ANOVa or LMEMs) and how generalized additive models (GAMs) are useful to analyze non-linear data.
+
+An in-depth coverage of this topic can be found in [this](https://www.biorxiv.org/content/10.1101/2021.06.10.447970v1) preprint from our lab ( the manuscript is currently under review).
+
+The GitHub repositories for the paper and the "lightning talk" can be accessed using the links above.
+
+```{r, echo=FALSE, out.width = '60%', fig.align='center'}
+knitr::include_graphics('r_medicine.jpg')
+```
+
+
+```{r, embed xaringan,echo=FALSE}
+ xaringanExtra::embed_xaringan(url = "https://aimundo.github.io/RMedicine2021/slides/RMedicine2021_slides.html", ratio = "4:3")
+```

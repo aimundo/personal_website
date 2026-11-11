@@ -1,0 +1,13 @@
+---
+title: "Blog"
+description: "Writing on R, reproducible research, data visualization, and scientific manuscripts"
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  categories: true
+  feed: true
+page-layout: full
+---
+
+Articles and practical notes on research and reproducible workflows.
