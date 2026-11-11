@@ -1,189 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ariel Mundo</title>
-    <link>https://aimundo.netlify.app/</link>
-    <description>Recent content on Ariel Mundo</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 10 Jul 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://aimundo.netlify.app/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Prework</title>
-      <link>https://aimundo.netlify.app/collection/prework/</link>
-      <pubDate>Fri, 01 Jan 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/collection/prework/</guid>
-      <description>Welcome to the Introducing Yourself Online workshop! We look forward to meeting you. Before attending the workshop, please complete the following prework.
-Set up RStudio CloudSign up for a free RStudio Cloud account at https://rstudio.cloud/ before the workshop. I recommend logging in with an existing Google or GitHub account, if you have one (rather than creating a new account with another password you have to remember).</description>
-    </item>
-    
-    <item>
-      <title>Writing a manuscript using {bookdown}: A short guide for the life sciences (Part II)</title>
-      <link>https://aimundo.netlify.app/blog/2022-07-10-writing-a-manuscript-using-bookdown-2/</link>
-      <pubDate>Sun, 10 Jul 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/blog/2022-07-10-writing-a-manuscript-using-bookdown-2/</guid>
-      <description>How to structure your directories to make writing easy</description>
-    </item>
-    
-    <item>
-      <title>Writing a manuscript using {bookdown}: A short guide for the life sciences (Part I)</title>
-      <link>https://aimundo.netlify.app/blog/2022-04-29-writing-a-manuscript-using-bookdown/</link>
-      <pubDate>Fri, 29 Apr 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/blog/2022-04-29-writing-a-manuscript-using-bookdown/</guid>
-      <description>I describe here a general approach to create an academic manuscript, in a way that can be applicable for life sciences research</description>
-    </item>
-    
-    <item>
-      <title>Statistics and Reproducibility in Biomedical Research</title>
-      <link>https://aimundo.netlify.app/talks/reproducibility-biomedical/</link>
-      <pubDate>Wed, 23 Feb 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/talks/reproducibility-biomedical/</guid>
-      <description>DescriptionI had the privilege talking this year at the 2022 Toronto Workshop on Reproducibility Conference. I shared some thoughts on the struggle for reproducibility in Biomedical Research. Because I prepared the talk while completing my dissertation, I did not have time to make some nice xaringan slides (sorry, I know). But, the talk was recorded and can be found in the link above.
-The motivation for this talk came from my experience and (constant) struggle with Statistics during the first years of my PhD.</description>
-    </item>
-    
-    <item>
-      <title>First post after a long hiatus? Make a map!</title>
-      <link>https://aimundo.netlify.app/blog/2021-11-09-30-day-map-challenge/</link>
-      <pubDate>Tue, 09 Nov 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/blog/2021-11-09-30-day-map-challenge/</guid>
-      <description>I create a map from Guatemala using {rayshader}</description>
-    </item>
-    
-    <item>
-      <title>Using Generalized Additive Models for Biomedical Longitudinal data</title>
-      <link>https://aimundo.netlify.app/talks/gams-biomedical/</link>
-      <pubDate>Thu, 12 Aug 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/talks/gams-biomedical/</guid>
-      <description>DescriptionThis talk at the RMedicine 2021 Conference covers in a brief way the statistical treatment of longitudinal data with an emphasis on biomedical research, showing in a visual way the limitations of linear models (rm-ANOVa or LMEMs) and how generalized additive models (GAMs) are useful to analyze non-linear data.
-An in-depth coverage of this topic can be found in this preprint from our lab ( the manuscript is currently under review).</description>
-    </item>
-    
-    <item>
-      <title>Adding JavaScript animations using p5.js</title>
-      <link>https://aimundo.netlify.app/blog/2021-07-25-testing-javascript-visualizations/</link>
-      <pubDate>Sun, 25 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/blog/2021-07-25-testing-javascript-visualizations/</guid>
-      <description>After seeing some examples, I try to implement a p5.js animation to my site</description>
-    </item>
-    
-    <item>
-      <title>Resume</title>
-      <link>https://aimundo.netlify.app/resume/resume/</link>
-      <pubDate>Wed, 21 Jul 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/resume/resume/</guid>
-      <description>Click here.</description>
-    </item>
-    
-    <item>
-      <title>Panicking over References</title>
-      <link>https://aimundo.netlify.app/blog/panicking-over-references/</link>
-      <pubDate>Wed, 23 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/blog/panicking-over-references/</guid>
-      <description>Submitting a TeX file, and the final proof does not show the references</description>
-    </item>
-    
-    <item>
-      <title>Building a manuscript using Bookdown</title>
-      <link>https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/</link>
-      <pubDate>Fri, 04 Jun 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/blog/building-a-manuscript-using-bookdown/</guid>
-      <description>The joys and challenges of switching from Word to Bookdown to create a manuscript.</description>
-    </item>
-    
-    <item>
-      <title>Using Bookdown: Different authors in a document</title>
-      <link>https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/</link>
-      <pubDate>Wed, 19 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/blog/using-bookdown-different-authors-in-a-document/</guid>
-      <description>You are working on a manuscript using Bookdown and need to add author information. How do you do it without using the predefined method?</description>
-    </item>
-    
-    <item>
-      <title>Contact me</title>
-      <link>https://aimundo.netlify.app/contact/</link>
-      <pubDate>Mon, 25 Feb 2019 13:38:41 -0600</pubDate>
-      
-      <guid>https://aimundo.netlify.app/contact/</guid>
-      <description>** Contact page don&amp;rsquo;t contain a body, just the front matter above. See form.html in the layouts folder.
-Formspree requires a (free) account and new form to be set up. The link is made on the final published url in the field: Restrict to Domain. It is possible to register up to 2 emails free and you can select which one you want the forms to go to within Formspree in the Settings tab.</description>
-    </item>
-    
-    <item>
-      <title>Typography Styles &amp; Element Examples</title>
-      <link>https://aimundo.netlify.app/elements/</link>
-      <pubDate>Mon, 18 Feb 2019 12:27:33 -0600</pubDate>
-      
-      <guid>https://aimundo.netlify.app/elements/</guid>
-      <description>Font SizesAAAAAAAA6rem
-(96px)5rem
-(80px)3rem
-(48px)2.25rem
-(36px)1.5rem
-(24px)1.25rem
-(20px)1rem
-(16px).875rem
-(14px)Type SamplesHead&amp;shy;lineSub&amp;shy;head&amp;shy;lineLevel 1 HeadingOne page to rule them all...well, not really. This page displays sample typography and page elements to illustrate their style. Things like headings and paragraphs showing the beautiful type scale, form elements, tabular data, and image layouts just to name a few.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://aimundo.netlify.app/about/header/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/about/header/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://aimundo.netlify.app/about/sidebar/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/about/sidebar/</guid>
-      <description>** index doesn&amp;rsquo;t contain a body, just front matter above. See about/list.html in the layouts folder **</description>
-    </item>
-    
-    <item>
-      <title>Contributors</title>
-      <link>https://aimundo.netlify.app/contributors/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/contributors/</guid>
-      <description>Thank you to all the folks who have contributed both technical and creative skills to this project:
-  Desirée De Leon 🦒 (designed 5 of the custom color themes, made illustrations for the workshop, and provided general aesthetic feedback along the way)
-  Garrick Aden-Buie 🧙‍♀️ (debugged headroom.js and lent his panelset.js code to the theme)
-  Allison Horst 🐕 (awesome illustrations of campfires, seedlings, and evergreens, as well as my R Markdown hedgehog mascot 🦔)</description>
-    </item>
-    
-    <item>
-      <title>Hi!/¡Hola! </title>
-      <link>https://aimundo.netlify.app/about/main/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/about/main/</guid>
-      <description>** index doesn&amp;rsquo;t contain a body, just front matter above. See about/list.html in the layouts folder **</description>
-    </item>
-    
-    <item>
-      <title>License</title>
-      <link>https://aimundo.netlify.app/license/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://aimundo.netlify.app/license/</guid>
-      <description>My blog posts are released under a Creative Commons Attribution-ShareAlike 4.0 International License.
-</description>
-    </item>
-    
-  </channel>
-</rss>
