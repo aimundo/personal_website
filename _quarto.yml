@@ -5,6 +5,8 @@ project:
     - resume/**
     - images/**
     - js/**
+  render:
+    - "!files/Academic_CV_Ariel_Mundo_Ortiz_Nov_2026.Rmd"
 
 website:
   title: "Ariel Mundo"
