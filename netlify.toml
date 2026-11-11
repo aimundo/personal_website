@@ -1,0 +1,7 @@
+# Install Quarto during Netlify builds; pin a tested version in QUARTO_VERSION.
+[build]
+  command = "bash scripts/netlify-build.sh"
+  publish = "_site"
+
+[build.environment]
+  QUARTO_VERSION = "1.8.27"

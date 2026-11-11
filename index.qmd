@@ -1,0 +1,30 @@
+---
+title: ""
+page-layout: full
+title-block-banner: false
+---
+
+::: {.hero}
+
+![](images/profile-pic.png){fig-alt="Ariel Mundo" width=100% fig-align="center"}
+
+::: {}
+<div class="eyebrow"></div>
+
+# Ariel Mundo Ortiz
+
+<div class="subtitle">Research Associate · McGill University</div>
+
+:::
+:::
+
+## About me
+
+I am a Research Associate at McGill University, working in Robert Platt's research group at the School of Population and Global Health (SPGH). My research interests include the analysis of longitudinal health data, synthetic electronic health data, and the evaluation of machine-learning methods in healthcare settings.
+
+Outside research, I enjoy reading and discovering new books. A CV can be found [here](files/CV_Ariel_Mundo_Ortiz.pdf){target="_blank"}.
+
+You can reach out at ariel DOT mundoortiz AT mcgill DOT ca.
+
+<div class="section-divider"></div>
+

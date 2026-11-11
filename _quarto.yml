@@ -1,0 +1,61 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - resume/**
+    - images/**
+    - js/**
+
+website:
+  title: "Ariel Mundo"
+  site-url: https://aimundo.rbind.io
+  favicon: images/icon.png
+  description: "Research Associate at McGill University | Health Data Science"
+  navbar:
+    title: false
+    background: light
+    left:
+      - text: About
+        href: index.qmd
+      - text: Blog
+        href: blog/index.qmd
+      - text: Talks
+        href: talks/index.qmd
+#      - text: CV
+#        href: CV/index.qmd
+    right:
+      - text: '<i class="fa-brands fa-orcid" aria-hidden="true"></i>'
+        href: https://orcid.org/0000-0002-6014-4538
+        aria-label: ORCID
+      - text: '<i class="fa-brands fa-google-scholar" aria-hidden="true"></i>'
+        href: https://scholar.google.com/citations?user=3Ia93g4AAAAJ
+        aria-label: Google Scholar
+      - text: '<i class="fa-brands fa-bluesky" aria-hidden="true"></i>'
+        href: https://bsky.app/profile/amundortiz.bsky.social
+        aria-label: Bluesky
+      - icon: github
+        href: https://github.com/aimundo
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/ariel-mundo-16324b1a8/
+        aria-label: LinkedIn
+  page-footer:
+    left: "© 2026 Ariel Mundo"
+    right: "Built with Quarto"
+  search: true
+
+format:
+  html:
+    theme: [spacelab, styles.scss]
+    include-in-header: includes/brand-icons.html
+    fontsize: 1.05em
+    linkcolor: "#176b78"
+    toc: false
+    smooth-scroll: true
+    code-copy: true
+    grid:
+      body-width: 850px
+      margin-width: 260px
+
+execute:
+  freeze: auto
