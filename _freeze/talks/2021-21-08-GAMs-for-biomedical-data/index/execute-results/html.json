@@ -1,0 +1,15 @@
+{
+  "hash": "42f5229480a77d17465c5b4547dd2e62",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: Using Generalized Additive Models for Biomedical Longitudinal data\ndate: '2021-08-12'\ndescription: When linear models don't work\ncategories:\n- R\n- longitudinal data\n- simulation\nexecute:\n  eval: false\n  warning: false\n  message: false\nformat:\n  html:\n    toc: true\n---\n\n## Description \n\nThis talk at the RMedicine 2021 Conference covers in a brief way the statistical treatment of longitudinal data with an emphasis on biomedical research, showing in a visual way the limitations of linear models (rm-ANOVa or LMEMs) and how generalized additive models (GAMs) are useful to analyze non-linear data.\n\nAn in-depth coverage of this topic can be found in [this](https://www.biorxiv.org/content/10.1101/2021.06.10.447970v1) preprint from our lab ( the manuscript is currently under review).\n\nThe GitHub repositories for the paper and the \"lightning talk\" can be accessed using the links above.\n\n\n::: {.cell layout-align=\"center\"}\n\n:::\n\n\n\n\n::: {.cell}\n\n:::\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
