@@ -25,3 +25,23 @@ h1, h2, h3 { color: #26384a; letter-spacing: -.025em; font-weight: 650; }
 
 /* Align brand marks with Quarto's existing GitHub and LinkedIn navbar icons. */
 .navbar .fa-brands { font-size: 1.12rem; vertical-align: -0.04em; }
+
+
+/* Reduce space below your name */
+#title-block-header {
+  margin-bottom: 0.5rem;
+  padding-bottom: 0;
+}
+
+/* Reduce space before the About Me content */
+#title-block-header + main,
+main.content {
+  padding-top: 0.3rem;
+}
+
+/* Slightly enlarge the introductory text */
+#title-block-header + main p:first-child,
+main.content > p:first-child {
+  font-size: 1.12em;
+  line-height: 1.65;
+}

@@ -5,6 +5,7 @@ project:
     - resume/**
     - images/**
     - js/**
+    - talks/slides_GAMs/**
 
 website:
   title: "Ariel Mundo"
